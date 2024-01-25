@@ -1,0 +1,3 @@
+Temporary txt file to force git to acknowledge the existence of the Docs folder.
+
+Delete when Docs is not empty.
