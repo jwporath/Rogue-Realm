@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Xml;
 
-public class EntityDeadState : MonoBehaviour
+public class EntityDeadState : EntityState
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public override void EnterState(Entity entity){
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    }
+    public override void UpdateState(Entity entity){
+
+    }
+    public override void FixedUpdateState(Entity entity){
+
+    }
+    public override void OnCollisionEnter(Entity entity){
+
     }
 }

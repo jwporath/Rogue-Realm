@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
-    private float horizontal;
     private bool isFacingRight=true;
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpingPower;
-    //was public:
-    [SerializeField] private Rigidbody2D rBody;
+
     [SerializeField] private Transform groundCheck, headCheck;
     [SerializeField] private LayerMask groundLayer, brickLayer;
 
@@ -17,19 +13,26 @@ public class Player : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
-        if(Input.GetButtonDown("Jump")&&isGround()){
-            rBody.velocity=new Vector2(rBody.velocity.x, jumpingPower);
+        if(Input.GetButtonDown("Jump") && isGround() && currentState!=jumpingState){
+            currentState=jumpingState;
+            currentState.EnterState(this);
         }
         flip();
+        currentState.UpdateState(this);
     }
 
     private void FixedUpdate(){
-        rBody.velocity=new Vector2(horizontal*speed, rBody.velocity.y);
+        currentState.FixedUpdateState(this);
     }
 
     private bool isGround(){
         return Physics2D.OverlapCircle(groundCheck.position,0.2f,groundLayer);
     }
+
+    // could use for power ups
+    // private bool isCollidingWithPowerUp(){
+    //     return Physics2D.OverlapCircle(headCheck.position,0.2f,brickLayer);
+    // }
 
     private void flip(){
         if(isFacingRight&&horizontal<0f || !isFacingRight&&horizontal>0f){
@@ -40,7 +43,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    private bool isCollidingWithBrick(){
-        return Physics2D.OverlapCircle(headCheck.position, 0.2f, brickLayer);
+    private void OnCollisionEnter2D(Collision2D collision){
+        // Use this for picking up stuff:
+        // if(collision.gameObject.tag=="PowerUp"&&isCollidingWithPowerUp()){
+        //     PickUp(collision.gameObject);
+        // }
+        currentState.OnCollisionEnter(this);
     }
 }

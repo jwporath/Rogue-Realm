@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 
-public class EntityState : MonoBehaviour
+public abstract class EntityState
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract void EnterState(Entity entity);
+    public abstract void UpdateState(Entity entity);
+    public abstract void FixedUpdateState(Entity entity);
+    public abstract void OnCollisionEnter(Entity entity);
 }
