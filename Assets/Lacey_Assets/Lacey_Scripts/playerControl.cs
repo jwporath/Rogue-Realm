@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//PAUSED VIDEO AT 1:18:00
+
 public class Player : Entity
 {
     private bool isFacingRight=true;
