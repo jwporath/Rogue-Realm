@@ -11,4 +11,4 @@ Watch [here](https://youtu.be/cpMLMDVHTzk).
 
 [Part 4](https://youtu.be/JuBbmCn5YLM): Menus pt2, Parallax pt1
 
-[Part 5](): Parallax pt2
+[Part 5](https://youtu.be/qiCRzbM6sR8): Parallax pt2
