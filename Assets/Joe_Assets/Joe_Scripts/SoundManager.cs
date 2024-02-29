@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager
 {
     int Volume = 100;
     public AudioClip testClip;
@@ -19,19 +19,19 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    void deathSound(){
-        //play death sound
+    virtual void deathSound(){
+        //play wilhelm scream
     }
     
-    void hurtSound(){
+    virtual void hurtSound(){
         //play hurt sound
     }
     
-    void attackSound(){
+    virtual void attackSound(){
         //play attack sound
     }
 
-    void moveSound(){
+    virtual void moveSound(){
         //play movement sound
     }
 
