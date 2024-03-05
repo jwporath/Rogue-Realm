@@ -19,7 +19,7 @@ public class PlayerTest
     public IEnumerator PlayerTestWithEnumeratorPasses()
     {
         // Use the Assert class to test conditions.
-        
+        // Assert.
         // Use yield to skip a frame.
         yield return null;
     }
