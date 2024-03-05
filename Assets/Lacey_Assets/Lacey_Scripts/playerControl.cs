@@ -10,6 +10,7 @@ public class Player : Entity
 
     [SerializeField] private Transform groundCheck, headCheck;
     [SerializeField] private LayerMask groundLayer, brickLayer;
+    PlayerSounds playerSounds = new PlayerSounds();
 
     // Update is called once per frame
     void Update()
@@ -18,6 +19,7 @@ public class Player : Entity
         if(Input.GetButtonDown("Jump") && isGround() && currentState!=jumpingState){
             currentState=jumpingState;
             currentState.EnterState(this);
+            playerSounds.jumpSound();
         }
         flip();
         currentState.UpdateState(this);
