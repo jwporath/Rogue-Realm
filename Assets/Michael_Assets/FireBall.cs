@@ -39,6 +39,14 @@ public class FireBall : MonoBehaviour
         //GameObject fireballObjectCopy = Instantiate<GameObject>(fireballObject);
         UpdateVelocity();
         transform.position += velocity * Time.deltaTime;
+        if(GameObject.FindGameObjectWithTag("FireBall").transform.position.x > 9 ||
+            GameObject.FindGameObjectWithTag("FireBall").transform.position.x < -9 ||
+            GameObject.FindGameObjectWithTag("FireBall").transform.position.y > 5 ||
+            GameObject.FindGameObjectWithTag("FireBall").transform.position.y < -5)
+        {
+            //Debug.Log(count);
+            Application.Quit(1);
+        }
         // if(GameObject.FindGameObjectsWithTag("FireBall");
         // {
 

@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 880221136}
-  meleeSpeed: 1
+  meleeSpeed: 0.01
   damage: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
