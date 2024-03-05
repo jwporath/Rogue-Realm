@@ -16,5 +16,7 @@ Watch [here](https://youtu.be/cpMLMDVHTzk).
 
 # In-Class Presentation Document Links:
 [Testing](https://tinyurl.com/TL3DOCS) (TL3s)
+
 [Platformer](https://tinyurl.com/GOMBDOC) (TL2s)
+
 [Git](https://tinyurl.com/TL1GitDoc) (TL1s)
