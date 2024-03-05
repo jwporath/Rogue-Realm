@@ -1,5 +1,7 @@
-# Coeur d'Game Systems Analysis Presentation Link:
-Watch [here](https://youtu.be/cpMLMDVHTzk).
+# Coeur d'Game Presentation Links:
+[Systems Analysis](https://youtu.be/cpMLMDVHTzk)
+
+[MVP](https://youtu.be/PFKzxJ4RGOw)
 
 
 # TL2 Unity Tutorial Presentation Links:
