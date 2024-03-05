@@ -5,7 +5,6 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     [SerializeField] private Animator anim;
-
     [SerializeField] private float meleeSpeed;
     [SerializeField] private float damage;
 
@@ -20,7 +19,6 @@ public class SwordAttack : MonoBehaviour
                 anim.SetTrigger("Attack");
                 timeUntilMelee = meleeSpeed;
             }
-            
         }
         else
         {
@@ -33,7 +31,7 @@ public class SwordAttack : MonoBehaviour
         if(other.tag == "Enemy")
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);
-            Debug.Log("Enemy Hit!");
+            Debug.Log("Enemy Hit! - Michaels' function!");
         }
     }
 }
