@@ -22,7 +22,7 @@ public class ControlScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+w    void FixedUpdate()
     {
         if(Input.GetKey(KeyCode.Space)){
             soundManager.testSound();
