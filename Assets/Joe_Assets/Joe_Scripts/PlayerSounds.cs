@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerSounds : SoundManager
 {
+    /*
     public override void deathSound(){
         //player death
     }
@@ -19,4 +20,5 @@ public class PlayerSounds : SoundManager
     public override void moveSound(){
         //player movement sound
     }
+    */
 }

@@ -9,7 +9,7 @@ public class SoundManager
     private AudioSource testSource;
     public void testSound(){
         
-        testSource = GetComponent<AudioSource>();
+        //testSource = GetComponent<AudioSource>();
         
         if(testClip != null){
             testSource.clip = testClip;
@@ -19,19 +19,19 @@ public class SoundManager
         }
     }
 
-    virtual void deathSound(){
+    public virtual void deathSound(){
         //play wilhelm scream
     }
     
-    virtual void hurtSound(){
+    public virtual void hurtSound(){
         //play hurt sound
     }
     
-    virtual void attackSound(){
+    public virtual void attackSound(){
         //play attack sound
     }
 
-    virtual void moveSound(){
+    public virtual void moveSound(){
         //play movement sound
     }
 
