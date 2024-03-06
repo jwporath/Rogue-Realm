@@ -50,9 +50,4 @@ public class SoundManager
         //play movement sound
     }
 
-    void musicManager(string MusicType)
-    {
-        //play different songs at points in the game.
-    }
-
 }
