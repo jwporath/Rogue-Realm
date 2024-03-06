@@ -54,4 +54,11 @@ public class Player : Entity
         // }
         currentState.OnCollisionEnter(this);
     }
+
+    // public int getSpeed(){
+    //     return 
+    // }
+    // public void setSpeed(){
+        
+    // }
 }

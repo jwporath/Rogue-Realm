@@ -1,5 +1,7 @@
-# Coeur d'Game Systems Analysis Presentation Link:
-Watch [here](https://youtu.be/cpMLMDVHTzk).
+# Coeur d'Game Presentation Links:
+[Systems Analysis](https://youtu.be/cpMLMDVHTzk)
+
+[MVP](https://youtu.be/PFKzxJ4RGOw)
 
 
 # TL2 Unity Tutorial Presentation Links:
@@ -12,3 +14,11 @@ Watch [here](https://youtu.be/cpMLMDVHTzk).
 [Part 4](https://youtu.be/JuBbmCn5YLM): Menus pt2, Parallax pt1
 
 [Part 5](https://youtu.be/qiCRzbM6sR8): Parallax pt2
+
+
+# In-Class Presentation Document Links:
+[Testing](https://tinyurl.com/TL3DOCS) (TL3s)
+
+[Platformer](https://tinyurl.com/GOMBDOC) (TL2s)
+
+[Git](https://tinyurl.com/TL1GitDoc) (TL1s)
