@@ -4,20 +4,19 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class TestScript
+public class PlayModeTesting
 {
     // A Test behaves as an ordinary method
     [Test]
-    public void TestScriptSimplePasses()
+    public void PlayModeTestingSimplePasses()
     {
         // Use the Assert class to test conditions
-        //GameObject fireballInstance = GameObject.Instantiate(FireBall)
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     [UnityTest]
-    public IEnumerator TestScriptWithEnumeratorPasses()
+    public IEnumerator PlayModeTestingWithEnumeratorPasses()
     {
         // Use the Assert class to test conditions.
         // Use yield to skip a frame.

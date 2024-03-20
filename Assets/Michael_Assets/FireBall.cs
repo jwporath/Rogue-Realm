@@ -31,14 +31,8 @@ public class FireBall : MonoBehaviour
         int count = getCount.Length;
 
         Debug.Log(count);
-        
-    }
 
-    private void Update()
-    {
-        //GameObject fireballObjectCopy = Instantiate<GameObject>(fireballObject);
         UpdateVelocity();
-        transform.position += velocity * Time.deltaTime;
         if(GameObject.FindGameObjectWithTag("FireBall").transform.position.x > 9 ||
             GameObject.FindGameObjectWithTag("FireBall").transform.position.x < -9 ||
             GameObject.FindGameObjectWithTag("FireBall").transform.position.y > 5 ||
@@ -47,10 +41,22 @@ public class FireBall : MonoBehaviour
             //Debug.Log(count);
             Application.Quit(1);
         }
-        // if(GameObject.FindGameObjectsWithTag("FireBall");
-        // {
+        
+    }
 
-        // }
+    private void Update()
+    {
+  
+        //GameObject fireballObjectCopy = Instantiate<GameObject>(fireballObject);
+        UpdateVelocity();
+        transform.position += velocity * Time.deltaTime;
+        if(GameObject.FindGameObjectWithTag("FireBall").transform.position.x > 9 ||
+            GameObject.FindGameObjectWithTag("FireBall").transform.position.x < -9 ||
+            GameObject.FindGameObjectWithTag("FireBall").transform.position.y > 5 ||
+            GameObject.FindGameObjectWithTag("FireBall").transform.position.y < -5)
+        {
+            Application.Quit(1);
+        }
     }
 
     // private void CountBalls()
