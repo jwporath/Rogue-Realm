@@ -12,5 +12,9 @@ public class PlayerControl : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)){
             sounds.jumpSound();
         }
+
+        if(Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.RightArrow)){
+            sounds.moveSound();
+        }
     }
 }
