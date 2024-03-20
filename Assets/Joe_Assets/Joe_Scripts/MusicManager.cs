@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-int const NoMusic = -1;
-int const MenuMusic = 0;
-int const GameMusic = 1;
-int const BossMusic = 2;
-int const DeathMusic = 3;
+
 
 public class musicManager
 {
     //play different songs at points in the game.
-
+    int NoMusic = -1;
+    int MenuMusic = 0;
+    int GameMusic = 1;
+    int BossMusic = 2;
+    int DeathMusic = 3;
     private bool isPaused = false;
-    private int currSong = NoMusic;
-    public class pause()
+    
+    private int currSong = -1;
+    void pause()
     {
         isPaused = true;
     }
@@ -36,11 +37,6 @@ public class musicManager
                 //Set the AudioClip for the AudioSource
                 audioSource.clip = soundClip;
 
-                //Set the flag to true to indicate that the sound is now playing
-                soundPlaying = true;
-
-                //Reset after a delay
-                Reset(TimeSpan.FromSeconds(soundClip.length));
                 //Play the audio
                 audioSource.Play();
 
