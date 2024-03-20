@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class TDoor : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject gameCam;
+    
+    private GameObject player;
+    private GameObject gameCam;
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        gameCam = GameObject.FindGameObjectWithTag("MainCamera");
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
