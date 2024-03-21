@@ -12,20 +12,11 @@ public class Level : MonoBehaviour
     [SerializeField] private GameObject Platform5;
     [SerializeField] private GameObject Platform6;
 
-    private GameObject[,] RoomMap = new GameObject[9, 9];
+    private Room[,] RoomMap = new Room[9, 9];
      
     // Start is called before the first frame update
     void Start()
     {
-        // Place starting room in array
-        Component[] startRoom = this.GetComponentsInChildren<Component>();
-        foreach(Component i in startRoom)
-        {
-            if(i.name == "Room")
-            {
-                RoomMap[4, 4] = i.gameObject;
-            }
-        }
         GenerateLevel();
     }
 
@@ -35,8 +26,19 @@ public class Level : MonoBehaviour
         
     }
 
-    void GenerateLevel()
+    public void GenerateLevel()
     {
+
+        // Place starting room in array
+        // Component[] startRoom = this.GetComponentsInChildren<Component>();
+        // foreach(Component i in startRoom)
+        // {
+        //     if(i.name == "Room")
+        //     {
+        //         RoomMap[4, 4] = i.gameObject;
+        //     }
+        // }
+
         GenerateRoom();
     }
 
