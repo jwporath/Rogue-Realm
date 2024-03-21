@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class SoundManager
 {
+    public string activeSound = "";
     public bool soundPlaying = false;
 
     public async Task Reset(TimeSpan delay)
@@ -75,6 +76,8 @@ public class SoundManager
                 //Set the flag to true to indicate that the sound is now playing
                 soundPlaying = true;
 
+                //set active sound
+                activeSound = soundName;
                 //Reset after a delay
                 Reset(TimeSpan.FromSeconds(soundClip.length));
                 //Play the audio

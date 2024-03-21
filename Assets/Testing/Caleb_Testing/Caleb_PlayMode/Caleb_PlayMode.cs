@@ -4,11 +4,11 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class Test
+public class Caleb_PlayMode
 {
     // A Test behaves as an ordinary method
     [Test]
-    public void TestSimplePasses()
+    public void Caleb_PlayModeSimplePasses()
     {
         // Use the Assert class to test conditions
     }
@@ -16,7 +16,7 @@ public class Test
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     [UnityTest]
-    public IEnumerator TestWithEnumeratorPasses()
+    public IEnumerator Caleb_PlayModeWithEnumeratorPasses()
     {
         // Use the Assert class to test conditions.
         // Use yield to skip a frame.
