@@ -14,78 +14,114 @@ public class Level : MonoBehaviour
 
     private Room[,] RoomMap = new Room[9, 9];
      
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        GenerateLevel();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void GenerateLevel()
-    {
-
-        // Place starting room in array
-        // Component[] startRoom = this.GetComponentsInChildren<Component>();
-        // foreach(Component i in startRoom)
-        // {
-        //     if(i.name == "Room")
-        //     {
-        //         RoomMap[4, 4] = i.gameObject;
-        //     }
-        // }
-
-        GenerateRoom();
-    }
-
-    GameObject GenerateRoom()
-    {
-        // create room
-        GameObject Room = Instantiate(RoomPrefab, new Vector3(18, 0, 0), Quaternion.identity, this.gameObject.transform);
-
-        // Enable door
-        LDoor LeftDoor1 = Room.GetComponentInChildren<LDoor>(true);
-        LeftDoor1.gameObject.SetActive(true);
-
-        // Disable NoDoor object
-        Component[] LeftNoDoor1 = Room.GetComponentsInChildren<Component>();
-        foreach(Component i in LeftNoDoor1)
+        // Set all elements in RoomMap to null
+        for (int y = 0; y < 9; y++)
         {
-            if(i.name == "LeftNoDoor")
+            for (int x = 0; x < 9; x++)
             {
-                i.gameObject.SetActive(false);
+                RoomMap[x, y] = null;
             }
         }
 
+        // Place starting room in array
+        RoomMap[4, 4] = this.GetComponentInChildren<Room>();
+
+        GenerateRooms();
+    }
+
+    void GenerateRooms()
+    {
+        // Create Right default room
+        GameObject room = Instantiate(RoomPrefab, new Vector3(18, 0, 0), Quaternion.identity, this.gameObject.transform);
+        room.transform.gameObject.tag = "New";
+
+        // Add Room to RoomMap
+        Room[] arr = this.GetComponentsInChildren<Room>();
+        foreach (Room i in arr)
+        {
+            if (i.tag == "New")
+            {
+                RoomMap[5, 4] = i;
+                RoomMap[5, 4].gameObject.transform.tag = "Untagged";
+                RoomMap[5, 4].SetX(5);
+                RoomMap[5, 4].SetY(4);
+                RoomMap[5, 4].EnableLeftDoor();
+            }
+        }
+
+        // Create Left default room
+        room = Instantiate(RoomPrefab, new Vector3(-18, 0, 0), Quaternion.identity, this.gameObject.transform);
+        room.transform.gameObject.tag = "New";
+
+        // Add Room to RoomMap
+        arr = this.GetComponentsInChildren<Room>();
+        foreach (Room i in arr)
+        {
+            if (i.tag == "New")
+            {
+                RoomMap[3, 4] = i;
+                RoomMap[3, 4].gameObject.transform.tag = "Untagged";
+                RoomMap[3, 4].SetX(5);
+                RoomMap[3, 4].SetY(4);
+                RoomMap[3, 4].EnableRightDoor();
+            }
+        }
+
+        // Add Platforms to Left
         int random = UnityEngine.Random.Range(1, 7);
-        GameObject platform;
         switch(random)
         {
             case 1:
-                platform = Instantiate(Platform1, Room.transform);
+                Instantiate(Platform1, RoomMap[3, 4].transform);
                 break;
             case 2:
-                platform = Instantiate(Platform2, Room.transform);
+                Instantiate(Platform2, RoomMap[3, 4].transform);
                 break;
             case 3:
-                platform = Instantiate(Platform3, Room.transform);
+                Instantiate(Platform3, RoomMap[3, 4].transform);
                 break;
             case 4:
-                platform = Instantiate(Platform4, Room.transform);
+                Instantiate(Platform4, RoomMap[3, 4].transform);
                 break;
             case 5:
-                platform = Instantiate(Platform5, Room.transform);
+                Instantiate(Platform5, RoomMap[3, 4].transform);
                 break;
             case 6:
-                platform = Instantiate(Platform6, Room.transform);
+                Instantiate(Platform6, RoomMap[3, 4].transform);
                 break;
             
         }
 
-        return Room;
+        // Add Platforms to Right
+        random = UnityEngine.Random.Range(1, 7);
+        switch(random)
+        {
+            case 1:
+                Instantiate(Platform1, RoomMap[5, 4].transform);
+                break;
+            case 2:
+                Instantiate(Platform2, RoomMap[5, 4].transform);
+                break;
+            case 3:
+                Instantiate(Platform3, RoomMap[5, 4].transform);
+                break;
+            case 4:
+                Instantiate(Platform4, RoomMap[5, 4].transform);
+                break;
+            case 5:
+                Instantiate(Platform5, RoomMap[5, 4].transform);
+                break;
+            case 6:
+                Instantiate(Platform6, RoomMap[5, 4].transform);
+                break;
+            
+        }
+    }
+
+    void GenerateRoom(int x, int y, Room Caller)
+    {
+
     }
 }
