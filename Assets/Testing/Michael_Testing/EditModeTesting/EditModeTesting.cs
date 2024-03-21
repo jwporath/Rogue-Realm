@@ -9,14 +9,19 @@ public class TestScript
     // A Test behaves as an ordinary method
 
     [Test]
-    public void SwordTest()
+    public void SwordTest1()
     {
         GameObject sword = new GameObject("Sword1");
         Assert.IsTrue(sword);
-        Debug.Log("sword creation test");
+        Debug.Log("sword creation test...Successful!");
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
+    [UnityTest]
+    public void SwordTest2()
+    {
+        
+    }
    
 }
