@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Empty Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Lacey_Assets/Lacey_Scenes/Lacey_Test_Scene.unity
+    guid: a1354326d74e8704c91c5aa264bca611
   m_configObjects: {}

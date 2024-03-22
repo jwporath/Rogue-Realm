@@ -3,23 +3,36 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using UnityEngine.SceneManagement;
 
 public class Lacey_Stress_Test
 {
-    // A Test behaves as an ordinary method
-    [Test]
-    public void Lacey_Stress_TestSimplePasses()
+    [UnitySetUp]
+    public IEnumerator SetUpScene()
     {
-        // Use the Assert class to test conditions
+        // Load the test scene
+        yield return SceneManager.LoadSceneAsync("Lacey_Test_Scene");
+    }
+    
+    [Test]
+    public void doesPlayerExist()
+    {
+        // Find the player object in the scene
+        GameObject playerObj = GameObject.Find("Player");
+
+        // Assert that the player object exists
+        Assert.IsNotNull(playerObj);
     }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator Lacey_Stress_TestWithEnumeratorPasses()
+    [Test]
+    public void isPlayerFacingRight()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        GameObject playerObj = GameObject.Find("Player");
+
+        // Get the Player component attached to the player object
+        Player player = playerObj.GetComponent<Player>();
+
+        // Assert that the player is facing right
+        Assert.IsTrue(player.isPlayerFacingRight());
     }
 }

@@ -54,6 +54,9 @@ public class Player : Entity
         // }
         currentState.OnCollisionEnter(this);
     }
+    public bool isPlayerFacingRight(){
+        return isFacingRight;
+    }
 
     // public int getSpeed(){
     //     return 
