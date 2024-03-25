@@ -34,5 +34,7 @@ public class Lacey_Stress_Test
 
         // Assert that the player is facing right
         Assert.IsTrue(player.isPlayerFacingRight());
+        // Assert.IsTrue(player.getSpeed()>0);
+
     }
 }
