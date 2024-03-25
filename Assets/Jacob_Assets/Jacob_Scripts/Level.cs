@@ -13,6 +13,8 @@ public class Level : MonoBehaviour
     [SerializeField] private GameObject Platform6;
 
     private Room[,] RoomMap = new Room[9, 9];
+
+    private int NumRooms;
      
     void Start()
     {
@@ -30,6 +32,8 @@ public class Level : MonoBehaviour
         RoomMap[4, 4].SetX(4);
         RoomMap[4, 4].SetY(4);
 
+        NumRooms = 1;
+
         GenerateRooms();
     }
 
@@ -39,6 +43,7 @@ public class Level : MonoBehaviour
         if(RoomMap[3, 4] == null)
         {
             GenerateRoom(3, 4, RoomMap[4, 4]);
+            // There is a bug here where the left room (3, 4) is not always connected with doors properly.
         }        
     }
 
@@ -120,8 +125,8 @@ public class Level : MonoBehaviour
         // Recursive generation calls
         int Left = UnityEngine.Random.Range(1, 4);
         int Right = UnityEngine.Random.Range(1, 4);
-        int Top = UnityEngine.Random.Range(1, 4);
-        int Bottom = UnityEngine.Random.Range(1, 4);
+        int Top = UnityEngine.Random.Range(1, 3);
+        int Bottom = UnityEngine.Random.Range(1, 3);
 
         if (Left == 1 && x > 0) // Left
         {
@@ -191,5 +196,13 @@ public class Level : MonoBehaviour
                 }
             }
         }
+    }
+
+    public Room GetRoom(int x, int y)
+    {
+        if(x < 9 && x >= 0 && y < 9 && y >= 0)
+            return RoomMap[x, y];
+        else
+            return null;
     }
 }

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Lacey_Assets/Lacey_Scenes/Lacey_Test_Scene.unity
     guid: a1354326d74e8704c91c5aa264bca611
+  - enabled: 1
+    path: Assets/Jacob_Assets/Jacob_Scenes/Jacob_Gen_Level.unity
+    guid: 13ecec6ea33d2234bab21d3e1e92c142
   m_configObjects: {}
