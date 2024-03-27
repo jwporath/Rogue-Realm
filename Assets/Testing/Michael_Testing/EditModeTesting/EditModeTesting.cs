@@ -16,12 +16,20 @@ public class TestScript
         Debug.Log("sword creation test...Successful!");
     }
 
+    [Test]
+    public void FireballTest()
+    {
+        GameObject fireball = new GameObject("FireBall");
+        Assert.IsTrue(fireball);
+        Debug.Log("fireball creation test...Successful!");
+    }
+
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
-    [UnityTest]
-    public void SwordTest2()
-    {
+    // [UnityTest]
+    // public void SwordTest2()
+    // {
         
-    }
+    // }
    
 }
