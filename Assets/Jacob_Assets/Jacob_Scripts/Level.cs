@@ -34,27 +34,27 @@ public class Level : MonoBehaviour
 
         NumRooms = 1;
 
-        GenerateRooms();
+        StartGeneration();
     }
 
-    void GenerateRooms()
+    void StartGeneration()
     {
         RoomMap[4, 4].EnableRightDoor();
         Debug.Log("Called right function");
-        GenerateRoom(5, 4, RoomMap[4, 4]);
-        if(RoomMap[3, 4] == null)
+        GenerateRoom(5, 4, RoomMap[4, 4]); // generate right path
+        if(RoomMap[3, 4] == null) // generate left path
         {
             RoomMap[4, 4].EnableLeftDoor();
             Debug.Log("Called left function");
             GenerateRoom(3, 4, RoomMap[4, 4]);
         }        
-        if(RoomMap[4, 3] == null)
+        if(RoomMap[4, 3] == null) // generate top path
         {
             RoomMap[4, 4].EnableTopDoor();
             Debug.Log("Called top function");
             GenerateRoom(4, 3, RoomMap[4, 4]);
         }    
-        if(RoomMap[4, 5] == null)
+        if(RoomMap[4, 5] == null) // generate bottom path
         {
             RoomMap[4, 4].EnableBottomDoor();
             Debug.Log("Called bottom function");
