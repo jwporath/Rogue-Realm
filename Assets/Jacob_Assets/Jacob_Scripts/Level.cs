@@ -143,8 +143,8 @@ public class Level : MonoBehaviour
         // Recursive generation calls
         int Left = UnityEngine.Random.Range(1, 4);
         int Right = UnityEngine.Random.Range(1, 4);
-        int Top = UnityEngine.Random.Range(1, 3);
-        int Bottom = UnityEngine.Random.Range(1, 3);
+        int Top = UnityEngine.Random.Range(1, 4);
+        int Bottom = UnityEngine.Random.Range(1, 4);
 
         if (Left == 1 && x > 0) // Left
         {
@@ -214,6 +214,11 @@ public class Level : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void GenerateBossRoom()
+    {
+        
     }
 
     public Room GetRoom(int x, int y)
