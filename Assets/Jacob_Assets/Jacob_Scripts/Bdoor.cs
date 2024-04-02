@@ -13,15 +13,30 @@ public class Bdoor : MonoBehaviour
         gameCam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void Update()
     {
-        if(collision.gameObject.tag == "Player")
+        double XDif = Mathf.Abs(this.transform.position.x - player.transform.position.x);
+        double YDif = Mathf.Abs(this.transform.position.y - player.transform.position.y);
+
+        if (Input.GetKeyDown("e") && XDif < 1.5 && YDif < 1)
         {
-            Vector3 pos = new Vector3(player.transform.position.x, player.transform.position.y - 3.5f, player.transform.position.z);
+            Vector3 pos = new Vector3(player.transform.position.x, player.transform.position.y - 5.5f, player.transform.position.z);
             player.transform.position = pos;
 
-            pos = new Vector3(gameCam.transform.position.x, gameCam.transform.position.y - 10f, gameCam.transform.position.z);
+            pos = new Vector3(gameCam.transform.position.x, gameCam.transform.position.y - 12f, gameCam.transform.position.z);
             gameCam.transform.position = pos;
         }
     }
+
+    // void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if(collision.gameObject.tag == "Player")
+    //     {
+    //         Vector3 pos = new Vector3(player.transform.position.x, player.transform.position.y - 5.5f, player.transform.position.z);
+    //         player.transform.position = pos;
+
+    //         pos = new Vector3(gameCam.transform.position.x, gameCam.transform.position.y - 12f, gameCam.transform.position.z);
+    //         gameCam.transform.position = pos;
+    //     }
+    // }
 }

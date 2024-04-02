@@ -39,12 +39,27 @@ public class Level : MonoBehaviour
 
     void GenerateRooms()
     {
+        RoomMap[4, 4].EnableRightDoor();
+        Debug.Log("Called right function");
         GenerateRoom(5, 4, RoomMap[4, 4]);
         if(RoomMap[3, 4] == null)
         {
+            RoomMap[4, 4].EnableLeftDoor();
+            Debug.Log("Called left function");
             GenerateRoom(3, 4, RoomMap[4, 4]);
-            // There is a bug here where the left room (3, 4) is not always connected with doors properly.
         }        
+        if(RoomMap[4, 3] == null)
+        {
+            RoomMap[4, 4].EnableTopDoor();
+            Debug.Log("Called top function");
+            GenerateRoom(4, 3, RoomMap[4, 4]);
+        }    
+        if(RoomMap[4, 5] == null)
+        {
+            RoomMap[4, 4].EnableBottomDoor();
+            Debug.Log("Called bottom function");
+            GenerateRoom(4, 5, RoomMap[4, 4]);
+        }    
     }
 
     void GenerateRoom(int x, int y, Room Caller)
@@ -71,28 +86,28 @@ public class Level : MonoBehaviour
         if (x > Caller.GetX()) // Move new room to Right
         {
             vector = Caller.transform.position;
-            vector.x += 18;
+            vector.x += 20;
             RoomMap[x, y].transform.position = vector;
             RoomMap[x, y].EnableLeftDoor();
         }
         else if (y > Caller.GetY()) // Move new room to Bottom
         {
             vector = Caller.transform.position;
-            vector.y -= 10;
+            vector.y -= 12;
             RoomMap[x, y].transform.position = vector;
             RoomMap[x, y].EnableTopDoor();
         }
         else if (x < Caller.GetX()) // Move new room to Left
         {
             vector = Caller.transform.position;
-            vector.x -= 18;
+            vector.x -= 20;
             RoomMap[x, y].transform.position = vector;
             RoomMap[x, y].EnableRightDoor();
         }
         else // Move new room to Top
         {
             vector = Caller.transform.position;
-            vector.y += 10;
+            vector.y += 12;
             RoomMap[x, y].transform.position = vector;
             RoomMap[x, y].EnableBottomDoor();
         }
