@@ -35,6 +35,8 @@ public class Level : MonoBehaviour
         NumRooms = 1;
 
         StartGeneration();
+
+        Debug.Log(NumRooms);
     }
 
     void StartGeneration()
@@ -78,6 +80,7 @@ public class Level : MonoBehaviour
                 RoomMap[x, y].gameObject.transform.tag = "Untagged";
                 RoomMap[x, y].SetX(x);
                 RoomMap[x, y].SetY(y);
+                NumRooms++;
             }
         }
 
