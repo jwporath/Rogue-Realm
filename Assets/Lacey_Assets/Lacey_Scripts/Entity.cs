@@ -14,7 +14,7 @@ public class Entity : MonoBehaviour
     public EntityJumpingState jumpingState=new EntityJumpingState();
     public EntityDeadState deadState=new EntityDeadState();
 
-    void Start()
+    protected virtual void Start()
     {
         currentState=idleState;
         currentState.EnterState(this);

@@ -11,6 +11,14 @@ public class Player : Entity
     [SerializeField] private Transform groundCheck, headCheck;
     [SerializeField] private LayerMask groundLayer, brickLayer;
     PlayerSounds playerSounds = new PlayerSounds();
+    private int maxHealth, curHealth, coins;
+
+    protected override void Start(){
+        base.Start();
+        maxHealth=100;
+        curHealth=maxHealth;
+        coins=0;
+    }
 
     // Update is called once per frame
     void Update()
@@ -49,7 +57,7 @@ public class Player : Entity
 
     private void OnCollisionEnter2D(Collision2D collision){
         // Use this for picking up stuff:
-        // if(collision.gameObject.tag=="PowerUp"&&isCollidingWithPowerUp()){
+        // if(collision.gameObject.tag=="Coin"&&isCollidingWithPowerUp()){
         //     PickUp(collision.gameObject);
         // }
         currentState.OnCollisionEnter(this);
@@ -57,11 +65,22 @@ public class Player : Entity
     public bool isPlayerFacingRight(){
         return isFacingRight;
     }
-
-    // public int getSpeed(){
-    //     return 
-    // }
-    // public void setSpeed(){
-        
-    // }
+    public void modifyHealth(int modifier){
+        if( ((curHealth+modifier)<=maxHealth) && ((curHealth+modifier)>=0))
+        {
+            curHealth+=modifier;
+        }
+    }
+    public int getCurrentHealth(){
+        return curHealth;
+    }
+    public int getMaxHealth(){
+        return maxHealth;
+    }
+    public void modifyCoins(int modifier){
+        coins+=modifier;
+    }
+    public int getCoins(){
+        return coins;
+    }
 }
