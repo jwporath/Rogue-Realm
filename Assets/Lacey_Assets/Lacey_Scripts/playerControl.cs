@@ -17,7 +17,7 @@ public class Player : Entity
     private int coins;
 
     private HealthBar healthBar;
-
+    // [SerializeField] private HealthBar healthBar;
 
     protected override void Start(){
         base.Start();
@@ -72,6 +72,15 @@ public class Player : Entity
             Vector3 localScale=transform.localScale;
             localScale.x*=-1f;
             transform.localScale=localScale;
+
+            // healthBar.GetComponentInParent<Canvas>();
+            // GameObject gameOb;
+            // GameObject hbCanvas=GameObject.FindGameObjectWithTag("HealthBarCanvas");
+            Canvas hbCanvas=this.GetComponentInChildren<Canvas>();
+
+            Vector3 hbScale=hbCanvas.transform.localScale;
+            hbScale.x*=-1f;
+            hbCanvas.transform.localScale=hbScale;
         }
     }
 
