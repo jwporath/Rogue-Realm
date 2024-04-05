@@ -7,14 +7,9 @@ using UnityEngine;
 public class musicManager
 {
     //play different songs at points in the game.
-    int NoMusic = -1;
-    int MenuMusic = 0;
-    int GameMusic = 1;
-    int BossMusic = 2;
-    int DeathMusic = 3;
+    public string songPlaying = "None";
     private bool isPaused = false;
     
-    private int currSong = -1;
     void pause()
     {
         isPaused = true;
@@ -36,13 +31,13 @@ public class musicManager
 
                 //Set the AudioClip for the AudioSource
                 audioSource.clip = soundClip;
-
+                songPlaying = songName;
+                audioSource.loop = true;
                 //Play the audio
                 audioSource.Play();
 
                 //Destroy the GameObject after the audio clip finishes playing
                 GameObject.Destroy(gameObject, soundClip.length);
-
             }
             else
             {
@@ -56,22 +51,22 @@ public class musicManager
         }
     }
 
-    void menuMusic()
+    public void menuMusic()
     {
         PlaySong("Menu");
     }
 
-    void gameMusic()
+    public void gameMusic()
     {
         PlaySong("Game");
     }
 
-    void bossMusic()
+    public void bossMusic()
     {
         PlaySong("Boss");
     }
 
-    void deathMusic()
+    public void deathMusic()
     {
         PlaySong("Death");
     }

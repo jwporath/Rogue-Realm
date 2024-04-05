@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     // Start is called before the first frame update
    private PlayerSounds sounds = new PlayerSounds();
+   private MusicManager music = new MusicManager();
     // Update is called once per frame
     void Update()
     {
@@ -16,5 +17,9 @@ public class PlayerControl : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.RightArrow)){
             sounds.moveSound();
         }
+    }
+
+    void start(){
+        music.PlaySong("Game")
     }
 }

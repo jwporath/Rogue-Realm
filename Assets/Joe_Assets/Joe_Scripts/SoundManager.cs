@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SoundManager
 {
-    public string activeSound = "";
+    public  string activeSound = "";
     public bool soundPlaying = false;
 
     public async Task Reset(TimeSpan delay)
