@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Lacey_Assets/Lacey_Scenes/MVP.unity
     guid: c23f37960f805a247ba80a231b18a5e1
+  - enabled: 1
+    path: Assets/Caleb_Assets/Caleb_Scenes/Caleb_Scene.unity
+    guid: f360446f3743366459551e41076935f1
   m_configObjects: {}
