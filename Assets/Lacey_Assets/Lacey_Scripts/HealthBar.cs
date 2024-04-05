@@ -2,32 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
-
 public class HealthBar : MonoBehaviour
 {
-    public Slider slider; 
-    public Gradient gradient; 
-    public Image fill; 
+    [SerializeField] private int _health;
+    [SerializeField] private Slider _healthBar;
+    [SerializeField] private float _timeToDrain=0.2f;
+    [SerializeField] private Gradient _healthBarGradient;
+    private float _target=1f;
+    private int _healthMax;
+    private Image fill;
+    private Coroutine drainHealthBarCoroutine;
+    private Color _newHealthBarColor;
 
-    //Setting Max value for health so we don't have change it inside Unity Editor 
-    public void SetMaxHealth(int health) { 
-        GameObject playerObj = GameObject.Find("Player");
-        // Get the Player component attached to the player object
-        Player player = playerObj.GetComponent<Player>();
-
-        slider.maxValue = player.getMaxHealth(); 
-        slider.value = player.getMaxHealth(); //start at max health 
-
-        fill.color = gradient.Evaluate(1f); 
+    private void Start()
+    {
+        fill=GetComponent<Image>();
+        fill.color=_healthBarGradient.Evaluate(_target);
+        CheckHealthBarGradient();
+    }
+    public void UpdateHealthBar(float maxHealth, float currentHealth)
+    {
+        _target=currentHealth/maxHealth;
+        drainHealthBarCoroutine=StartCoroutine(DrainHealthBar());
+        CheckHealthBarGradient();
     }
 
-    //Change health from Slider inside HealthBar 
-    public void SetHealth(int health) { 
-        GameObject playerObj = GameObject.Find("Player");
-        // Get the Player component attached to the player object
-        Player player = playerObj.GetComponent<Player>();
 
-        slider.value = player.getCurrentHealth(); 
-        fill.color = gradient.Evaluate(slider.normalizedValue); 
+    private IEnumerator DrainHealthBar()
+    {
+        float _fillAmount=fill.fillAmount;
+        float elapsedTime=0f; 
+        Color curColor=fill.color;
+
+        while(elapsedTime<_timeToDrain)
+        {
+            elapsedTime+=Time.deltaTime;
+            // lerp (smoooth) fill amount and color based on gradient
+            fill.fillAmount=Mathf.Lerp(_fillAmount, _target, (elapsedTime/_timeToDrain));
+            fill.color=Color.Lerp(curColor,_newHealthBarColor, (elapsedTime/_timeToDrain));
+
+            yield return null;
+        }
+    }
+
+    private void CheckHealthBarGradient()
+    {
+        _newHealthBarColor=_healthBarGradient.Evaluate(_target);
     }
 }
+

@@ -46,4 +46,5 @@ public class skeletonBehavior : MonoBehaviour
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * 0f;
         }
     }
+
 }
