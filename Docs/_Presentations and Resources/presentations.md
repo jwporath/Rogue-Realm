@@ -15,6 +15,8 @@
 
 [Part 5](https://youtu.be/qiCRzbM6sR8): Parallax pt2
 
+[Part 6](https://youtu.be/4mFkOq9Y_XY): Health Bar and Enemies
+
 
 # In-Class Presentation Document Links:
 [Testing](https://tinyurl.com/TL3DOCS) (TL3s)
