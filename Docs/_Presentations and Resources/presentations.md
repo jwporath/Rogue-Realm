@@ -26,3 +26,5 @@
 [Platformer](https://tinyurl.com/GOMBDOC) (TL2s)
 
 [Git](https://tinyurl.com/TL1GitDoc) (TL1s)
+
+[Version Control](https://docs.google.com/presentation/d/1oVxctxy6COwloUzFQR8p86MmaPXjOTatm70w5G-YtDY/edit) (TL6s)
