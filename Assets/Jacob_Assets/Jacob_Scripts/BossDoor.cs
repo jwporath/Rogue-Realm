@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossDoor : MonoBehaviour
 {
@@ -22,11 +23,13 @@ public class BossDoor : MonoBehaviour
 
         if (Input.GetKeyDown("e") && XDif < 1.5 && YDif < 1) // player enters door
         {
-            Vector3 pos = new Vector3(player.transform.position.x, player.transform.position.y + 5f, player.transform.position.z);
-            player.transform.position = pos;
+            // // temporarily reloads scene
+            // string currentSceneName = SceneManager.GetActiveScene().name;
+            // SceneManager.LoadScene(currentSceneName);
 
-            pos = new Vector3(gameCam.transform.position.x, gameCam.transform.position.y + 12f, gameCam.transform.position.z);
-            gameCam.transform.position = pos;
+            Level l = FindAnyObjectByType<Level>();
+            l.ClearLevel();
+            l.LoadLevel();
         }
     }
 }

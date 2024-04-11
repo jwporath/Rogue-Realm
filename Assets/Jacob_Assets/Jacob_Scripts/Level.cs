@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class Level : MonoBehaviour
 {
     [SerializeField] private GameObject RoomPrefab;
     [SerializeField] private GameObject BossRoomPrefab;
+    [SerializeField] private GameObject SpawnRoomPrefab;
     [SerializeField] private GameObject Platform1;
     [SerializeField] private GameObject Platform2;
     [SerializeField] private GameObject Platform3;
@@ -18,6 +20,11 @@ public class Level : MonoBehaviour
     private int NumRooms;
      
     void Start()
+    {
+        LoadLevel();
+    }
+
+    public void LoadLevel()
     {
         // Set all elements in RoomMap to null
         for (int y = 0; y < 9; y++)
@@ -42,7 +49,33 @@ public class Level : MonoBehaviour
         Debug.Log(NumRooms);
     }
 
-    void StartGeneration()
+    public void ClearLevel()
+    {
+        // Delete all generated rooms
+        Room[] rooms = this.GetComponentsInChildren<Room>();
+        foreach (Room i in rooms)
+        {
+            Destroy(i.gameObject);
+        }
+
+        NumRooms = 0;
+
+        // Create new start room
+        GameObject room = Instantiate(SpawnRoomPrefab, new UnityEngine.Vector3(0, 0, 0), UnityEngine.Quaternion.identity, this.gameObject.transform);
+
+        // Reset player and Game camera position
+        UnityEngine.Vector3 position = new UnityEngine.Vector3(0, 1.5f, 0);
+
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        p.transform.position = position;
+
+        position = new UnityEngine.Vector3(0, 0, -10);
+
+        GameObject c = GameObject.FindGameObjectWithTag("MainCamera");
+        c.transform.position = position;
+    }
+
+    private void StartGeneration()
     {
         RoomMap[4, 4].EnableRightDoor();
         Debug.Log("Called right function");
@@ -67,10 +100,10 @@ public class Level : MonoBehaviour
         }    
     }
 
-    void GenerateRoom(int x, int y, Room Caller)
+    private void GenerateRoom(int x, int y, Room Caller)
     {
         // Create room
-        GameObject room = Instantiate(RoomPrefab, Caller.transform.position, Quaternion.identity, this.gameObject.transform);
+        GameObject room = Instantiate(RoomPrefab, Caller.transform.position, UnityEngine.Quaternion.identity, this.gameObject.transform);
         room.transform.gameObject.tag = "New";
 
         // Add Room to RoomMap
@@ -88,7 +121,7 @@ public class Level : MonoBehaviour
         }
 
         // Move to correct position
-        Vector3 vector;
+        UnityEngine.Vector3 vector;
         if (x > Caller.GetX()) // Move new room to Right
         {
             vector = Caller.transform.position;
@@ -237,7 +270,7 @@ public class Level : MonoBehaviour
         bool goodPosition = false;
 
         // Create BossRoom at x:0 y:0 z:0
-        GameObject BossRoom = Instantiate(BossRoomPrefab, new Vector3(0, 0, 0), Quaternion.identity, this.gameObject.transform);
+        GameObject BossRoom = Instantiate(BossRoomPrefab, new UnityEngine.Vector3(0, 0, 0), UnityEngine.Quaternion.identity, this.gameObject.transform);
         BossRoom b = this.GetComponentInChildren<BossRoom>();
 
         while (!goodPosition)
@@ -303,7 +336,7 @@ public class Level : MonoBehaviour
         }
         
         // Calculate coordinates for placement
-        Vector3 position = new Vector3((x - 4) * 20, (y - 4) * -12, 0);
+        UnityEngine.Vector3 position = new UnityEngine.Vector3((x - 4) * 20, (y - 4) * -12, 0);
         BossRoom.transform.position = position;
 
         // Add Room to RoomMap
