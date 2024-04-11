@@ -348,8 +348,6 @@ public class Level : MonoBehaviour
         NumRooms++;
         RoomMap[x, y].DebugMessage();
         Debug.Log("created BossRoom");
-        Debug.Log(x);
-        Debug.Log(y);
     }
 
     public Room GetRoom(int x, int y)
