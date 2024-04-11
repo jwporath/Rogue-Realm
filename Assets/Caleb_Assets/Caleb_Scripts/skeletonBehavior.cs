@@ -28,10 +28,24 @@ public class skeletonBehavior : MonoBehaviour
         {
             Vector3 direction = (playerTarget.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            rb.rotation = angle;
             moveDirection = direction;
         }
         distance = Vector3.Distance (playerTarget.transform.position, rb.transform.position);
+        
+        if(playerTarget.transform.position.x < this.gameObject.transform.position.x && this.gameObject.transform.localScale.x > 0)
+        {
+            Vector3 localScale=transform.localScale;
+            localScale.x*=-1f;
+            transform.localScale=localScale;
+        }
+        else if(playerTarget.transform.position.x > this.gameObject.transform.position.x && this.gameObject.transform.localScale.x < 0)
+        {
+            Vector3 localScale=transform.localScale;
+            localScale.x*=-1f;
+            transform.localScale=localScale;
+        }
+
+
     }
 
     

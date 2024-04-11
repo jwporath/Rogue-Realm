@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     // Start is called before the first frame update
    private PlayerSounds sounds = new PlayerSounds();
-   private musicManager music = new musicManager();
+   private musicManager music;
     // Update is called once per frame
     void Update()
     {

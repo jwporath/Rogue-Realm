@@ -15,6 +15,10 @@
 
 [Part 5](https://youtu.be/qiCRzbM6sR8): Parallax pt2
 
+[Part 6](https://youtu.be/4mFkOq9Y_XY): Health Bar and Enemies
+
+[Part 7](https://youtu.be/QnylsghsM1Y): Sounds
+
 
 # In-Class Presentation Document Links:
 [Testing](https://tinyurl.com/TL3DOCS) (TL3s)
@@ -22,3 +26,5 @@
 [Platformer](https://tinyurl.com/GOMBDOC) (TL2s)
 
 [Git](https://tinyurl.com/TL1GitDoc) (TL1s)
+
+[Version Control](https://docs.google.com/presentation/d/1oVxctxy6COwloUzFQR8p86MmaPXjOTatm70w5G-YtDY/edit) (TL6s)
