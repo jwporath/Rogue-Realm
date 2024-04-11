@@ -16,15 +16,18 @@ public class Player : Entity
     private float maxHealth, curHealth;
     private int coins;
 
-    private HealthBar healthBar;
-    // [SerializeField] private HealthBar healthBar;
+    // private HealthBar healthBar;
+    // private GameObject healthBar;
+    [SerializeField] private HealthBar healthBar;
 
     protected override void Start(){
         base.Start();
         maxHealth=100;
         curHealth=maxHealth;
         coins=0;
-        healthBar=GetComponentInChildren<HealthBar>();
+        // healthBar=GetComponentInChildren<HealthBar>();
+        // healthBar=GameObject.FindGameObjectWithTag("HealthBarCanvas");
+        Debug.Log(healthBar);
     }
 
     // Update is called once per frame
@@ -76,11 +79,13 @@ public class Player : Entity
             // healthBar.GetComponentInParent<Canvas>();
             // GameObject gameOb;
             // GameObject hbCanvas=GameObject.FindGameObjectWithTag("HealthBarCanvas");
-            Canvas hbCanvas=this.GetComponentInChildren<Canvas>();
+            // Canvas hbCanvas=this.GetComponentInChildren<Canvas>();
+            // // Canvas hbCanvas2=hbCanvas.GetComponentInChildren<Canvas>();
 
-            Vector3 hbScale=hbCanvas.transform.localScale;
-            hbScale.x*=-1f;
-            hbCanvas.transform.localScale=hbScale;
+            // // Vector3 hbScale=hbCanvas2.transform.localScale;
+            // // hbScale.x*=-1f;
+            // Vector3 hbScale=localScale;
+            // hbCanvas.transform.localScale=hbScale;
         }
     }
 
