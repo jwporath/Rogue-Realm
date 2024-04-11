@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySounds : SoundManager
 {
+    //decoration of decorator pattern
     public override void deathSound()
     {
         playSound("enemyDeath");

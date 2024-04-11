@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class SoundManager
 {
-    public  string activeSound = "";
+    
+    public string activeSound = "";
     public bool soundPlaying = false;
 
     public async Task Reset(TimeSpan delay)
@@ -34,9 +35,12 @@ public class SoundManager
         {
             Debug.LogError("No audio clip assigned.\n");
             GameObject.Destroy(testObject);
-        }        
+        }
     }
 
+
+    /*Virtual functions for dynamic binding
+      This also results in the decorator pattern.*/
     public virtual void deathSound()
     {
         playSound("Scream");
@@ -57,7 +61,8 @@ public class SoundManager
         //play movement sound
     }
 
-    public void playSound(string soundName){
+    public void playSound(string soundName)
+    {
         //Check if the sound is not already playing
         if (!soundPlaying)
         {

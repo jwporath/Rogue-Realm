@@ -1,11 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 
 
 public class musicManager
 {
+    /*
+    private static readonly Lazy<musicManager> lazyInstance =
+     new Lazy<musicManager>(() => new musicManager());
+
+    public static musicManager Instance => lazyInstance.Value;
+
+    private musicManager() { }
+
+    */
     //play different songs at points in the game.
     public string songPlaying = "None";
     private bool isPaused = false;
