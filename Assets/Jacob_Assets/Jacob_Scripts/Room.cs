@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Codice.Client.Common.GameUI;
 using UnityEngine;
 
 public class Room : MonoBehaviour
@@ -23,6 +24,11 @@ public class Room : MonoBehaviour
     void Update()
     {
         
+    }
+
+    virtual public void DebugMessage()
+    {
+        Debug.Log("Called Room Debug Message");
     }
 
     public void EnableTopDoor()

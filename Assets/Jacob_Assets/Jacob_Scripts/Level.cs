@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class Level : MonoBehaviour
 {
     [SerializeField] private GameObject RoomPrefab;
+    [SerializeField] private GameObject BossRoomPrefab;
+    [SerializeField] private GameObject SpawnRoomPrefab;
     [SerializeField] private GameObject Platform1;
     [SerializeField] private GameObject Platform2;
     [SerializeField] private GameObject Platform3;
@@ -17,6 +20,11 @@ public class Level : MonoBehaviour
     private int NumRooms;
      
     void Start()
+    {
+        LoadLevel();
+    }
+
+    public void LoadLevel()
     {
         // Set all elements in RoomMap to null
         for (int y = 0; y < 9; y++)
@@ -32,14 +40,44 @@ public class Level : MonoBehaviour
         RoomMap[4, 4].SetX(4);
         RoomMap[4, 4].SetY(4);
 
+        RoomMap[4, 4].DebugMessage();
+
         NumRooms = 1;
 
         StartGeneration();
 
+        GenerateBossRoom();
+
         Debug.Log(NumRooms);
     }
 
-    void StartGeneration()
+    public void ClearLevel()
+    {
+        // Delete all generated rooms
+        Room[] rooms = this.GetComponentsInChildren<Room>();
+        foreach (Room i in rooms)
+        {
+            DestroyImmediate(i.gameObject);
+        }
+
+        NumRooms = 0;
+
+        // Create new start room
+        GameObject room = Instantiate(SpawnRoomPrefab, new UnityEngine.Vector3(0, 0, 0), UnityEngine.Quaternion.identity, this.gameObject.transform);
+
+        // Reset player and Game camera position
+        UnityEngine.Vector3 position = new UnityEngine.Vector3(0, 1.5f, 0);
+
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        p.transform.position = position;
+
+        position = new UnityEngine.Vector3(0, 0, -10);
+
+        GameObject c = GameObject.FindGameObjectWithTag("MainCamera");
+        c.transform.position = position;
+    }
+
+    private void StartGeneration()
     {
         RoomMap[4, 4].EnableRightDoor();
         Debug.Log("Called right function");
@@ -64,10 +102,10 @@ public class Level : MonoBehaviour
         }    
     }
 
-    void GenerateRoom(int x, int y, Room Caller)
+    private void GenerateRoom(int x, int y, Room Caller)
     {
         // Create room
-        GameObject room = Instantiate(RoomPrefab, Caller.transform.position, Quaternion.identity, this.gameObject.transform);
+        GameObject room = Instantiate(RoomPrefab, Caller.transform.position, UnityEngine.Quaternion.identity, this.gameObject.transform);
         room.transform.gameObject.tag = "New";
 
         // Add Room to RoomMap
@@ -85,7 +123,7 @@ public class Level : MonoBehaviour
         }
 
         // Move to correct position
-        Vector3 vector;
+        UnityEngine.Vector3 vector;
         if (x > Caller.GetX()) // Move new room to Right
         {
             vector = Caller.transform.position;
@@ -145,6 +183,15 @@ public class Level : MonoBehaviour
         int Right = UnityEngine.Random.Range(1, 4);
         int Top = UnityEngine.Random.Range(1, 4);
         int Bottom = UnityEngine.Random.Range(1, 4);
+
+        // If level already has 50 or more rooms, stop generation.
+        if (NumRooms >= 50)
+        {
+            Left = 3;
+            Right = 3;
+            Top = 3;
+            Bottom = 3;
+        }
 
         if (Left == 1 && x > 0) // Left
         {
@@ -218,7 +265,91 @@ public class Level : MonoBehaviour
 
     private void GenerateBossRoom()
     {
+        int x = 0;
+        int y = 0;
+        int tempX;
+        int tempY;
+        bool goodPosition = false;
+
+        // Create BossRoom at x:0 y:0 z:0
+        GameObject BossRoom = Instantiate(BossRoomPrefab, new UnityEngine.Vector3(0, 0, 0), UnityEngine.Quaternion.identity, this.gameObject.transform);
+        BossRoom b = this.GetComponentInChildren<BossRoom>();
+
+        while (!goodPosition)
+        {
+            // Select random location
+            x = UnityEngine.Random.Range(0, 9);
+            y = UnityEngine.Random.Range(0, 9);
+
+            if (RoomMap[x, y] == null)
+            {
+                // Check for adjacent room
+                // right
+                tempY = y; // set tempY
+                tempX = x + 1;
+                if (tempX != 9)
+                {
+                    if (RoomMap[tempX, y] != null)
+                    {
+                        goodPosition = true;
+                        RoomMap[tempX, y].EnableLeftDoor();
+                        b.EnableRightDoor();
+                        continue;
+                    }
+                }
+                // left
+                tempX = x - 1;
+                if (tempX != -1)
+                {
+                    if (RoomMap[tempX, y] != null)
+                    {
+                        goodPosition = true;
+                        RoomMap[tempX, y].EnableRightDoor();
+                        b.EnableLeftDoor();
+                        continue;
+                    }
+                }
+                tempX = x; // reset tempX
+                // top
+                tempY = y - 1;
+                if (tempY != -1)
+                {
+                    if (RoomMap[x, tempY] != null)
+                    {
+                        goodPosition = true;
+                        RoomMap[x, tempY].EnableBottomDoor();
+                        b.EnableTopDoor();
+                        continue;
+                    }
+                }
+                // bottom
+                tempY = y + 1;
+                if (tempY != 9)
+                {
+                    if (RoomMap[x, tempY] != null)
+                    {
+                        goodPosition = true;
+                        RoomMap[x, tempY].EnableTopDoor();
+                        b.EnableBottomDoor();
+                        continue;
+                    }
+                }
+            }
+        }
         
+        // Calculate coordinates for placement
+        UnityEngine.Vector3 position = new UnityEngine.Vector3((x - 4) * 20, (y - 4) * -12, 0);
+        BossRoom.transform.position = position;
+
+        // Add Room to RoomMap
+        RoomMap[x, y] = b;
+        RoomMap[x, y].SetX(x);
+        RoomMap[x, y].SetY(y);
+        NumRooms++;
+        RoomMap[x, y].DebugMessage();
+        Debug.Log("created BossRoom");
+        Debug.Log(x);
+        Debug.Log(y);
     }
 
     public Room GetRoom(int x, int y)
