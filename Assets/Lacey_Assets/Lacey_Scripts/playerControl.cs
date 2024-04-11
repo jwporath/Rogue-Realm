@@ -14,7 +14,7 @@ public class Player : Entity
     [SerializeField] private string endScene;
     PlayerSounds playerSounds = new PlayerSounds();
     private float maxHealth, curHealth;
-    private int coins;
+    private int coins = 0;
 
     private HealthBar healthBar;
     // [SerializeField] private HealthBar healthBar;
@@ -115,6 +115,7 @@ public class Player : Entity
 
     public void pickupCoins(int modifier){
         coins+=modifier;
+        Debug.Log(coins);
     }
     public int getNumCoins(){
         return coins;
