@@ -23,6 +23,7 @@ public class enemySpawner : MonoBehaviour
             if(boss == false){
                 switch(rand){
                     case 1:
+                        //Enemy Skeleton
                         Instantiate(enemyPrefab, new UnityEngine.Vector3(0, 0, 0), UnityEngine.Quaternion.identity, parent.transform);
                         break;
                     case 2:
