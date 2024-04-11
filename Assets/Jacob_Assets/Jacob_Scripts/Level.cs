@@ -55,7 +55,7 @@ public class Level : MonoBehaviour
         Room[] rooms = this.GetComponentsInChildren<Room>();
         foreach (Room i in rooms)
         {
-            Destroy(i.gameObject);
+            DestroyImmediate(i.gameObject);
         }
 
         NumRooms = 0;
