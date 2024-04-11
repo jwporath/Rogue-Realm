@@ -17,6 +17,8 @@
 
 [Part 6](https://youtu.be/4mFkOq9Y_XY): Health Bar and Enemies
 
+[Part 7](https://youtu.be/QnylsghsM1Y): Sounds
+
 
 # In-Class Presentation Document Links:
 [Testing](https://tinyurl.com/TL3DOCS) (TL3s)
