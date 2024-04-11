@@ -746,6 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RoomPrefab: {fileID: 1247130923399780862, guid: 027b5eff990d79142a204cdd2ad499ad, type: 3}
+  BossRoomPrefab: {fileID: 5587107380511745267, guid: 5616f3a6d3f61e74d806d98e9fda437f, type: 3}
   Platform1: {fileID: 6480010567965240144, guid: 6328a02893bf3f749b3398354d07e46c, type: 3}
   Platform2: {fileID: 6240112688921031825, guid: ea6d00410cd08d74291a63310b2daec6, type: 3}
   Platform3: {fileID: 7509457052718416043, guid: 7b4cbf4784ff7eb48a50c8b9bde6040c, type: 3}
