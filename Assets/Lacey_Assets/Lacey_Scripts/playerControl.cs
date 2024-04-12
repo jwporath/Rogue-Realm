@@ -122,6 +122,12 @@ public class Player : Entity
     public int getNumCoins(){
         return coins;
     }
+    public void increaseSpeed(float modifier){
+        this.speed+=modifier;
+    }
+    public void increaseJumpingPower(float modifier){
+        this.jumpingPower+=modifier;
+    }
 
     private void Die()
     {
