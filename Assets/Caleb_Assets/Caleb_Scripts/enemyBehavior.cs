@@ -12,10 +12,12 @@ public class enemyBehavior : MonoBehaviour
     Transform playerTarget;
     Vector2 moveDirection;
     float distance;
+    private bool dead;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        dead = false;
     }
 
     private void Start()
@@ -44,7 +46,10 @@ public class enemyBehavior : MonoBehaviour
             localScale.x*=-1f;
             transform.localScale=localScale;
         }
-
+        if(dead)
+        {
+            this.gameObject.SetActive(false);
+        }
 
     }
 
@@ -58,6 +63,19 @@ public class enemyBehavior : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * 0f;
+        }
+    }
+
+    public bool isDead()
+    {
+        return dead;
+    }
+
+    void onCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == playerTarget)
+        {
+            dead = true;
         }
     }
 
