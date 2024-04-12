@@ -41,7 +41,7 @@ public class Level : MonoBehaviour
         RoomMap[4, 4].SetX(4);
         RoomMap[4, 4].SetY(4);
 
-        RoomMap[4, 4].DebugMessage();
+        // RoomMap[4, 4].DebugMessage();
 
         NumRooms = 1;
 
@@ -366,7 +366,7 @@ public class Level : MonoBehaviour
         RoomMap[x, y].SetX(x);
         RoomMap[x, y].SetY(y);
         NumRooms++;
-        RoomMap[x, y].DebugMessage();
+        // RoomMap[x, y].DebugMessage();
         Debug.Log("created BossRoom");
     }
 

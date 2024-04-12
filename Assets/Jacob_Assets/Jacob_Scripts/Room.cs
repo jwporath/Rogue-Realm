@@ -37,10 +37,10 @@ public class Room : MonoBehaviour
             isLocked();
     }
 
-    virtual public void DebugMessage()
-    {
-        Debug.Log("Called Room Debug Message");
-    }
+    // virtual public void DebugMessage()
+    // {
+    //     Debug.Log("Called Room Debug Message");
+    // }
 
     virtual public bool isLocked()
     {

@@ -36,8 +36,8 @@ public class BossRoom : Room
         EndLevelObj.SetActive(true);
     }
 
-    override public void DebugMessage()
-    {
-        Debug.Log("Called Boss Room Debug Message");
-    }
+    // override public void DebugMessage()
+    // {
+    //     Debug.Log("Called Boss Room Debug Message");
+    // }
 }
