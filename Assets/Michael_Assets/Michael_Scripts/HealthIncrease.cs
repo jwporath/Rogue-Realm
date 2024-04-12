@@ -5,6 +5,7 @@ using UnityEngine;
 public class HealthIncrease : MonoBehaviour
 {
     //public AudioClip pickupSound; // Sound to play when the coin is picked up
+    [SerializeField] private Player Player;
 
     private bool hasBeenPickedUp = false; // Flag to prevent multiple pickups
 
@@ -20,6 +21,8 @@ public class HealthIncrease : MonoBehaviour
             //GameManager.instance.AddCoins(randomCoinAmount);
             Debug.Log("Player has picked up "+randomHealthAmount+" health stats!!");
 
+
+            Player.increaseHealth(randomHealthAmount);
             // Play pickup sound
             /*if (pickupSound != null)
             {

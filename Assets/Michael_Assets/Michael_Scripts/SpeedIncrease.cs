@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpeedIncrease : MonoBehaviour
 {
     //public AudioClip pickupSound; // Sound to play when the powerup is picked up
+    [SerializeField] private Player Player;
 
     private bool hasBeenPickedUp = false; // Flag to prevent multiple pickups
 
@@ -20,6 +21,7 @@ public class SpeedIncrease : MonoBehaviour
             
             Debug.Log("Player has increase speed by "+randomSpeedAmount+"!!");
 
+            Player.increaseSpeed(randomSpeedAmount);
             // Play pickup sound
             /*if (pickupSound != null)
             {

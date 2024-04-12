@@ -5,6 +5,7 @@ using UnityEngine;
 public class JumpIncrease : MonoBehaviour
 {
     //public AudioClip pickupSound; // Sound to play when the powerup is picked up
+    [SerializeField] private Player Player;
 
     private bool hasBeenPickedUp = false; // Flag to prevent multiple pickups
 
@@ -20,6 +21,8 @@ public class JumpIncrease : MonoBehaviour
             
             Debug.Log("Player has increased jump power by "+randomJumpAmount+"!!");
             //GameObject("Player").Jump(EntityJumpingState += randomJumpAmount);
+
+            Player.increaseJumpingPower(randomJumpAmount);
 
             // Play pickup sound
             /*if (pickupSound != null)
