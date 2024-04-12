@@ -9,6 +9,7 @@ TagManager:
   - HealthBarCanvas
   - Broom
   - EndLevel
+  - EnemySpawn
   layers:
   - Default
   - TransparentFX

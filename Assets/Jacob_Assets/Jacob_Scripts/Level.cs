@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
+    [SerializeField] private enemySpawner EnemySpawner;
     [SerializeField] private GameObject RoomPrefab;
     [SerializeField] private GameObject BossRoomPrefab;
     [SerializeField] private GameObject SpawnRoomPrefab;
@@ -158,24 +159,36 @@ public class Level : MonoBehaviour
         switch(random)
         {
             case 1:
-                Instantiate(Platform1, RoomMap[x, y].transform);
+                Instantiate(Platform1, RoomMap[x, y].transform.position, UnityEngine.Quaternion.identity, RoomMap[x, y].transform);
                 break;
             case 2:
-                Instantiate(Platform2, RoomMap[x, y].transform);
+                Instantiate(Platform2, RoomMap[x, y].transform.position, UnityEngine.Quaternion.identity, RoomMap[x, y].transform);
                 break;
             case 3:
-                Instantiate(Platform3, RoomMap[x, y].transform);
+                Instantiate(Platform3, RoomMap[x, y].transform.position, UnityEngine.Quaternion.identity, RoomMap[x, y].transform);
                 break;
             case 4:
-                Instantiate(Platform4, RoomMap[x, y].transform);
+                Instantiate(Platform4, RoomMap[x, y].transform.position, UnityEngine.Quaternion.identity, RoomMap[x, y].transform);
                 break;
             case 5:
-                Instantiate(Platform5, RoomMap[x, y].transform);
+                Instantiate(Platform5, RoomMap[x, y].transform.position, UnityEngine.Quaternion.identity, RoomMap[x, y].transform);
                 break;
             case 6:
-                Instantiate(Platform6, RoomMap[x, y].transform);
+                Instantiate(Platform6, RoomMap[x, y].transform.position, UnityEngine.Quaternion.identity, RoomMap[x, y].transform);
                 break;
             
+        }
+
+        // Generate Enemies
+        Component[] ESpawns = RoomMap[x, y].gameObject.GetComponentsInChildren<Component>();
+
+        foreach (Component i in ESpawns)
+        {
+            if (i.tag == "EnemySpawn")
+            {
+                if (UnityEngine.Random.Range(0, 3) == 1)
+                    EnemySpawner.createEnemy(1, false, i.gameObject);
+            }
         }
 
         // Recursive generation calls

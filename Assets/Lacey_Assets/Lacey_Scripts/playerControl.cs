@@ -15,9 +15,10 @@ public class Player : Entity
     PlayerSounds playerSounds = new PlayerSounds();
     private float maxHealth, curHealth;
     private int coins = 0;
+    private bool BCMode=false;
 
     // private HealthBar healthBar;
-    // private GameObject healthBar;
+    [SerializeField] private GameObject BCFace;
     [SerializeField] private HealthBar healthBar;
 
     protected override void Start(){
@@ -27,7 +28,8 @@ public class Player : Entity
         coins=0;
         // healthBar=GetComponentInChildren<HealthBar>();
         // healthBar=GameObject.FindGameObjectWithTag("HealthBarCanvas");
-        Debug.Log(healthBar);
+        // Debug.Log(healthBar);
+
     }
 
     // Update is called once per frame
@@ -75,17 +77,6 @@ public class Player : Entity
             Vector3 localScale=transform.localScale;
             localScale.x*=-1f;
             transform.localScale=localScale;
-
-            // healthBar.GetComponentInParent<Canvas>();
-            // GameObject gameOb;
-            // GameObject hbCanvas=GameObject.FindGameObjectWithTag("HealthBarCanvas");
-            // Canvas hbCanvas=this.GetComponentInChildren<Canvas>();
-            // // Canvas hbCanvas2=hbCanvas.GetComponentInChildren<Canvas>();
-
-            // // Vector3 hbScale=hbCanvas2.transform.localScale;
-            // // hbScale.x*=-1f;
-            // Vector3 hbScale=localScale;
-            // hbCanvas.transform.localScale=hbScale;
         }
     }
 
@@ -100,16 +91,22 @@ public class Player : Entity
         return isFacingRight;
     }
     public void decreaseHealth(float damage){
-        curHealth-=damage;
-        healthBar.UpdateHealthBar(maxHealth,curHealth);
-        if(curHealth<=0) Die();
+        // make sure BC mode is off
+        if(BCMode==false){
+            curHealth-=damage;
+            healthBar.UpdateHealthBar(maxHealth,curHealth);
+            if(curHealth<=0) Die();
+        }
     }
     public void increaseHealth(float modifier){
-        // make sure we don't go over max
-        if((curHealth+modifier)<=maxHealth) curHealth+=modifier;
-        else if ( (curHealth<maxHealth) && (curHealth+modifier>maxHealth) ) curHealth=maxHealth;
+        // make sure BC mode is off
+        if(BCMode==false){
+            // make sure we don't go over max
+            if((curHealth+modifier)<=maxHealth) curHealth+=modifier;
+            else if ( (curHealth<maxHealth) && (curHealth+modifier>maxHealth) ) curHealth=maxHealth;
 
-        healthBar.UpdateHealthBar(maxHealth,curHealth);  
+            healthBar.UpdateHealthBar(maxHealth,curHealth); 
+        }         
     }
     public float getCurrentHealth(){
         return curHealth;
@@ -125,11 +122,28 @@ public class Player : Entity
     public int getNumCoins(){
         return coins;
     }
+    public void increaseSpeed(float modifier){
+        this.speed+=modifier;
+    }
+    public void increaseJumpingPower(float modifier){
+        this.jumpingPower+=modifier;
+    }
 
     private void Die()
     {
         // Destroy(gameObject);
         Debug.Log("You died.");
         SceneManager.LoadScene(endScene);
+    }
+    public void BCModeON(){
+        BCMode=true;
+        BCFace.SetActive(true);
+    }
+    public void BCModeOFF(){
+        BCMode=false;
+        BCFace.SetActive(false);
+    }
+    public bool getBC(){
+        return BCMode;
     }
 }

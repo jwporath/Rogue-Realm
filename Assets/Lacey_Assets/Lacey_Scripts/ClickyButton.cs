@@ -7,17 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandler 
 {
-    [SerializeField] private Image img; 
-    [SerializeField] private Sprite up, pressed;    
+    [SerializeField] protected Image img; 
+    [SerializeField] protected Sprite up, pressed;    
     // [SerializeField] private AudioClip compressClip, uncompressClip; 
     // [SerializeField] private AudioSource audioSource; 
 
-    public void OnPointerDown(PointerEventData eventData) { 
+    public virtual void OnPointerDown(PointerEventData eventData) { 
         img.sprite = pressed; 
         // audioSource.PlayOneShot(compressClip); 
     } 
 
-    public void OnPointerUp(PointerEventData eventData){ 
+    public virtual void OnPointerUp(PointerEventData eventData){ 
         img.sprite=up; 
         // buttonText=GetComponent<TMP_Text>();
         // audioSource.PlayOneShot(uncompressClip); 

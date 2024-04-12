@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
+    private bool Locked;
     private LDoor LeftDoor;
     private RDoor RightDoor;
     private TDoor TopDoor;
     private Bdoor BottomDoor;
     private int x;
     private int y;
+    private enemyBehavior[] enemies;
 
     void Awake()
     {
@@ -18,17 +20,38 @@ public class Room : MonoBehaviour
         RightDoor = this.GetComponentInChildren<RDoor>(true);
         TopDoor = this.GetComponentInChildren<TDoor>(true);
         BottomDoor = this.GetComponentInChildren<Bdoor>(true);
+        Locked = false;
+    }
+
+    void Start()
+    {
+        enemies = this.GetComponentsInChildren<enemyBehavior>();
+        if (enemies.Length > 0)
+            Locked = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        bool AllDead = true;
+        foreach (enemyBehavior i in enemies)
+        {
+            if (!i.isDead())
+                AllDead = false;
+        }
+
+        if (AllDead)
+            Locked = false;
     }
 
     virtual public void DebugMessage()
     {
         Debug.Log("Called Room Debug Message");
+    }
+
+    public bool isLocked()
+    {
+        return Locked;
     }
 
     public void EnableTopDoor()
