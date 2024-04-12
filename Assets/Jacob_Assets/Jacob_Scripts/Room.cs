@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    private bool Locked;
+    protected bool Locked;
     private LDoor LeftDoor;
     private RDoor RightDoor;
     private TDoor TopDoor;
@@ -33,6 +33,17 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Locked == true)
+            isLocked();
+    }
+
+    virtual public void DebugMessage()
+    {
+        Debug.Log("Called Room Debug Message");
+    }
+
+    virtual public bool isLocked()
+    {
         bool AllDead = true;
         foreach (enemyBehavior i in enemies)
         {
@@ -42,15 +53,6 @@ public class Room : MonoBehaviour
 
         if (AllDead)
             Locked = false;
-    }
-
-    virtual public void DebugMessage()
-    {
-        Debug.Log("Called Room Debug Message");
-    }
-
-    public bool isLocked()
-    {
         return Locked;
     }
 

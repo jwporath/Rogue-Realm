@@ -288,6 +288,13 @@ public class Level : MonoBehaviour
         GameObject BossRoom = Instantiate(BossRoomPrefab, new UnityEngine.Vector3(0, 0, 0), UnityEngine.Quaternion.identity, this.gameObject.transform);
         BossRoom b = this.GetComponentInChildren<BossRoom>();
 
+        Component[] c = b.GetComponentsInChildren<Component>();
+        foreach (Component i in c)
+        {
+            if (i.tag == "EnemySpawn")
+                EnemySpawner.createEnemy(1, true, i.gameObject);
+        }
+
         while (!goodPosition)
         {
             // Select random location

@@ -6,6 +6,7 @@ using UnityEngine.Scripting;
 public class BossRoom : Room
 {
     private GameObject EndLevelObj;
+    private enemyBehavior Boss;
 
     void Start()
     {
@@ -15,11 +16,18 @@ public class BossRoom : Room
             if (i.tag == "EndLevel")
                 EndLevelObj = i.gameObject;
         }
+        Boss = GetComponentInChildren<enemyBehavior>();
+    }
+
+    override public bool isLocked()
+    {
+        Locked = !Boss.isDead();
+        return Locked;
     }
 
     void Update()
     {
-        if (!EndLevelObj.activeInHierarchy) // Change this to check if boss is alive
+        if (Boss.isDead()) // Change this to check if boss is alive
             EnableExit();
     }
 
