@@ -73,7 +73,7 @@ public class enemyBehavior : MonoBehaviour
 
     void onCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == playerTarget)
+        if(col.gameObject.tag == "Player")
         {
             dead = true;
         }
