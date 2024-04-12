@@ -20,7 +20,7 @@ public class JumpIncrease : MonoBehaviour
         if (other.CompareTag("Player") && !hasBeenPickedUp)
         {
             // Generate a random number between 1 and 2
-            int randomJumpAmount = Random.Range(1, 3);
+            int randomJumpAmount = 1;
 
             // Add the random jump amount to the jump power stat
             

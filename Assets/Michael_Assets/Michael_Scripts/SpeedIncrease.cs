@@ -20,7 +20,7 @@ public class SpeedIncrease : MonoBehaviour
         if (other.CompareTag("Player") && !hasBeenPickedUp)
         {
             // Generate a random number between 1 and 3
-            float randomSpeedAmount = Random.Range(1, 4);
+            float randomSpeedAmount = 1;
 
             // Add the random speed powerup amount to the player
             
