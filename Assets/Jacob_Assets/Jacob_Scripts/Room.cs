@@ -33,7 +33,15 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        bool AllDead = true;
+        foreach (enemyBehavior i in enemies)
+        {
+            if (!i.isDead())
+                AllDead = false;
+        }
+
+        if (AllDead)
+            Locked = false;
     }
 
     virtual public void DebugMessage()

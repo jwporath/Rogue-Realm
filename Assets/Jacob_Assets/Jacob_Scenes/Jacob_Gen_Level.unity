@@ -1810,7 +1810,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c32ad3b7a9c54e6ab9600386c41689b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1857303100975367786, guid: 4c366b39a3a02406995b2faf34199274, type: 3}
+  skeletonWarrior: {fileID: 8535046600585729481, guid: 695290e1f3f7e479093b48d967854c3e, type: 3}
+  necromancer: {fileID: 1857303100975367786, guid: 4c366b39a3a02406995b2faf34199274, type: 3}
+  skeletonFodder: {fileID: 4203253220930855934, guid: 5199d497206a54b8ab5dcc0b6dfe81b4, type: 3}
+  ghost: {fileID: 6832914009421722705, guid: e0823d5777b0248d9a0f984216509598, type: 3}
+  pinkSlime: {fileID: 3530792038457316236, guid: baea6f49476034f2d8dc69d44f955c2d, type: 3}
 --- !u!114 &1496269744
 MonoBehaviour:
   m_ObjectHideFlags: 0

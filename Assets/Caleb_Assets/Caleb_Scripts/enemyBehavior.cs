@@ -71,7 +71,7 @@ public class enemyBehavior : MonoBehaviour
         return dead;
     }
 
-    void onCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.tag == "Player")
         {
