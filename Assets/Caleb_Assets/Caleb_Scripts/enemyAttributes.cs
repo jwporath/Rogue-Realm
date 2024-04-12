@@ -4,10 +4,10 @@ using UnityEngine;
 public class enemyAttributes : MonoBehaviour
 {
     //public class enemy {
-        int health;
-        int damage;
-        int armor;
-        int speed;
+        [SerializeField] int health;
+        [SerializeField] int damage;
+        [SerializeField] int armor;
+        [SerializeField] int speed;
     // }
         void Start(){
             GameObject spawner = GameObject.Find("enemySpawner");

@@ -30,18 +30,28 @@ public class enemySpawner : MonoBehaviour
                     case 1:
                         //Enemy Skeleton
                         Instantiate(skeletonWarrior, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
+                        enemyAttributes att = parent.GetComponentInChildren<EnemyAttributes>();
+                        att.enemyInit(20, 10, 0, 2, difficulty);
                         break;
                     case 2:
                         Instantiate(necromancer, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
+                        enemyAttributes att = parent.GetComponentInChildren<EnemyAttributes>();
+                        att.enemyInit(5, 0, 1, 2, difficulty);
                         break;
                     case 3:
                         Instantiate(skeletonFodder, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
+                        enemyAttributes att = parent.GetComponentInChildren<EnemyAttributes>();
+                        att.enemyInit(1, 5, 0, 2, difficulty);
                         break;
                     case 4:
                         Instantiate(ghost, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
+                        enemyAttributes att = parent.GetComponentInChildren<EnemyAttributes>();
+                        att.enemyInit(10, 8, 3, 2, difficulty);
                         break;
                     case 5:
                         Instantiate(pinkSlime, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
+                        enemyAttributes att = parent.GetComponentInChildren<EnemyAttributes>();
+                        att.enemyInit(30, 3, 5, 1, difficulty);
                         break;
                     case 6:
                         break;
@@ -63,6 +73,8 @@ public class enemySpawner : MonoBehaviour
                 switch(1){
                     case 1:
                         Instantiate(knightBoss, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
+                        enemyAttributes att = parent.GetComponentInChildren<EnemyAttributes>();
+                        att.enemyInit(75, 15, 2, 3, difficulty);
                         break;
                     case 2:
                         break;
