@@ -5,9 +5,14 @@ using UnityEngine;
 public class SpeedIncrease : MonoBehaviour
 {
     //public AudioClip pickupSound; // Sound to play when the powerup is picked up
-    [SerializeField] private Player Player;
+    private Player player;
 
     private bool hasBeenPickedUp = false; // Flag to prevent multiple pickups
+
+    void Start()
+    {
+        player = FindObjectOfType<Player>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,13 +20,13 @@ public class SpeedIncrease : MonoBehaviour
         if (other.CompareTag("Player") && !hasBeenPickedUp)
         {
             // Generate a random number between 1 and 3
-            int randomSpeedAmount = Random.Range(1, 4);
+            float randomSpeedAmount = Random.Range(1, 4);
 
             // Add the random speed powerup amount to the player
             
             Debug.Log("Player has increase speed by "+randomSpeedAmount+"!!");
 
-            Player.increaseSpeed(randomSpeedAmount);
+            player.increaseSpeed(randomSpeedAmount);
             // Play pickup sound
             /*if (pickupSound != null)
             {

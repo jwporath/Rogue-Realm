@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Codice.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,11 @@ public class Coin : MonoBehaviour
 {
     //public AudioClip pickupSound; // Sound to play when the coin is picked up
     //GameObject player = GameObject.FindGameObjectWithTag("Player");
-    [SerializeField] private Player Player;
+    private Player player;
+    void Start()
+    {
+        player = FindObjectOfType<Player>();
+    }
 
     private bool hasBeenPickedUp = false; // Flag to prevent multiple pickups
 
@@ -22,8 +27,9 @@ public class Coin : MonoBehaviour
             // Add the random coin amount to the coin count
             //GameManager.instance.AddCoins(randomCoinAmount);
             Debug.Log("Player has picked up "+randomCoinAmount+" coins!!");  
+            
             //GameObject player = GameObject.FindGameObjectWithTag("Player");
-            Player.pickupCoins(randomCoinAmount);   
+            player.pickupCoins(randomCoinAmount);   
 
             // Set flag to prevent multiple pickups
             hasBeenPickedUp = true;

@@ -5,9 +5,14 @@ using UnityEngine;
 public class HealthIncrease : MonoBehaviour
 {
     //public AudioClip pickupSound; // Sound to play when the coin is picked up
-    [SerializeField] private Player Player;
+    private Player player;
 
     private bool hasBeenPickedUp = false; // Flag to prevent multiple pickups
+
+    void Start()
+    {
+        player = FindObjectOfType<Player>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,7 +27,7 @@ public class HealthIncrease : MonoBehaviour
             Debug.Log("Player has picked up "+randomHealthAmount+" health stats!!");
 
 
-            Player.increaseHealth(randomHealthAmount);
+            player.increaseHealth(randomHealthAmount);
             // Play pickup sound
             /*if (pickupSound != null)
             {
