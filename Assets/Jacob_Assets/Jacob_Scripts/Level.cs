@@ -186,7 +186,8 @@ public class Level : MonoBehaviour
         {
             if (i.tag == "EnemySpawn")
             {
-                EnemySpawner.createEnemy(1, false, i.gameObject);
+                if (UnityEngine.Random.Range(0, 3) == 1)
+                    EnemySpawner.createEnemy(1, false, i.gameObject);
             }
         }
 

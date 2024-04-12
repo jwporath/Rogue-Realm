@@ -6,10 +6,12 @@ public class LDoor : MonoBehaviour
 {
     private GameObject player;
     private GameObject gameCam;
+    private Room parentRoom;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         gameCam = GameObject.FindGameObjectWithTag("MainCamera");
+        parentRoom = this.GetComponentInParent<Room>();
     }
 
     void Update()
@@ -17,7 +19,7 @@ public class LDoor : MonoBehaviour
         double XDif = Mathf.Abs(this.transform.position.x - player.transform.position.x);
         double YDif = Mathf.Abs(this.transform.position.y - player.transform.position.y);
 
-        if (Input.GetKeyDown("e") && XDif < 1.5 && YDif < 2)
+        if (Input.GetKeyDown("e") && XDif < 1.5 && YDif < 2 && !parentRoom.isLocked())
         {
             Vector3 pos = new Vector3(player.transform.position.x - 5f, player.transform.position.y, player.transform.position.z);
             player.transform.position = pos;
