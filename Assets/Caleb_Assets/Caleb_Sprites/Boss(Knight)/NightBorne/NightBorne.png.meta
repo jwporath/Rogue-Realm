@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05435d669e2e84033b8f9e86ba557c42
+guid: 434fb800c4299430ebd793b7bdfd8fb0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton enemy_0
+      name: NightBorne_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 272
-        width: 34
-        height: 32
+        x: 19
+        y: 336
+        width: 35
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f244e54089b94534bd55f80f6a6a71e
-      internalID: 1791538878
+      spriteID: 760219b47edfc401f98fa0d49b799580
+      internalID: -1422128978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_1
+      name: NightBorne_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 272
+        x: 99
+        y: 336
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a4fe8e329554bf3bf08ee4cb40d0de
+      internalID: -1966057753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 336
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8e7bcb9b93e46fc8cf71e56657b234
+      internalID: 835195468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_3
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 336
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4a2fc492ef145389b8e6b63ddb9147
+      internalID: -2065902703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_4
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 336
         width: 37
-        height: 32
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c4fa8f470794ed6bfbf8ea5ee07cbe
-      internalID: 1244051503
+      spriteID: 430a7f555ba914abb9843c04c72f576f
+      internalID: 1602659698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_2
+      name: NightBorne_5
       rect:
         serializedVersion: 2
-        x: 129
-        y: 272
-        width: 41
-        height: 32
+        x: 419
+        y: 336
+        width: 35
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7346df2e557ef4bbb9bf1ee3e8b6500c
-      internalID: 2146292855
+      spriteID: 7bd874f0edf6e4f84b5d9baf2202968f
+      internalID: 227420995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_3
+      name: NightBorne_6
       rect:
         serializedVersion: 2
-        x: 196
-        y: 272
-        width: 38
-        height: 32
+        x: 499
+        y: 336
+        width: 35
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,124 +250,418 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7152aa7443130491e8dd4d141574eb68
-      internalID: -1899554392
+      spriteID: 4bf8e6c680be04885911197257c72bfa
+      internalID: -1252496800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_4
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 272
-        width: 51
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 063740d729c474c8bb1622a17e243f10
-      internalID: 324056026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_5
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 272
-        width: 31
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2fe0dce9eea34a659d64bec30009641
-      internalID: -1504442404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_6
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 272
-        width: 26
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd1d3383424a34b09bbff1df91c7f4f4
-      internalID: -502742509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_7
-      rect:
-        serializedVersion: 2
-        x: 466
-        y: 272
-        width: 25
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7fea9f68879c48b3b8f0bc84756248d
-      internalID: -460650695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_8
-      rect:
-        serializedVersion: 2
-        x: 514
-        y: 272
-        width: 62
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 110fb924dc8024aabb24c6d2cc17dd4d
-      internalID: -1860871517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_9
+      name: NightBorne_7
       rect:
         serializedVersion: 2
         x: 579
-        y: 272
-        width: 39
+        y: 336
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d276181c6d8f4f0fb5658653aa5bf7f
+      internalID: 2101507858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_8
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 336
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da004c77890ea4e3ca360d1845b8c12f
+      internalID: -1357000151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 257
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc9535d7d3af41f995ae1b58a98cd0f
+      internalID: 1192462044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_10
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 257
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29b62b19954f490c84cb609ed4c07e2
+      internalID: -2140600748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_11
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 256
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3645a75c26b04a3aa5d1cc9573525d6
+      internalID: -1976344951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_12
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 257
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7be9de16929047c4895bda5532aaebe
+      internalID: 2004708200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_13
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 256
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff13e5de631e4d8f861b61f2ff7fd12
+      internalID: -1377172683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_14
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 258
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5971a3ca0644ef4ad050dd7c9bd949
+      internalID: 1642509124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_15
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 176
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c89dab108e984e378c16e9f8a29c747
+      internalID: -1239445724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_16
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 176
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cf0884eef3343898fbb90d8e3648bc
+      internalID: 915245523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_17
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 176
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd279f2162df48c6ae6f28623214594
+      internalID: -1371667772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_18
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 176
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beae84afcdfc7411e8b29e1a76cd4be8
+      internalID: -900216926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_19
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 188
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc731df085604cc48f511715fee2190
+      internalID: 292972972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_20
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 176
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8013db7274882422ba3fc9d253cd0205
+      internalID: 1559495069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_21
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 176
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274bbf8ceb3444eeda7f5c9819d78246
+      internalID: 263551908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_22
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 176
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecee38cccc4c493da031b81bdc64c47
+      internalID: -453977758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_23
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 176
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5903be4e80e1945e887e724e2ff3323a
+      internalID: -1335608165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_24
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 176
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3cd8d319b954ee1906bc9a0fddfcb5
+      internalID: -612763583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_25
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 170
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c58a8c67c75041d29aaa4f74edd3964
+      internalID: 1557674888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_26
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 173
+        width: 46
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -313,18 +670,480 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1183e61bbf3e4411881e1bba3ae35690
-      internalID: -76109555
+      spriteID: 9963de600b7f64975bceab59d5f927a1
+      internalID: -662788311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_10
+      name: NightBorne_27
       rect:
         serializedVersion: 2
-        x: 646
-        y: 272
+        x: 901
+        y: 176
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173c6dc3c8ce14be2974269eaba700e6
+      internalID: 635888409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_28
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 96
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c64d025715b4771bfe8a27e3ebfa87
+      internalID: 1940576477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_29
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 96
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4115358b3154c7cadacb9523ade293
+      internalID: -1647010287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_30
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 96
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72db9da9f6fea4fffaa2717d82aa50ae
+      internalID: -733240825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_31
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 96
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28f927e0d1f4434c9cb85a1b74b0f35
+      internalID: -1139603803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_32
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 96
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f4c944407de407893776a8821135db
+      internalID: 1796702728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_33
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 2
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57773f3801f09422daccacd592305d70
+      internalID: 2136504809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_34
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 2
+        width: 71
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776d3fd393dda408b8f7f6e86c9bb320
+      internalID: 1068928459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_35
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 3
+        width: 71
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dff938c983c247ca8a8c6d6af54c563
+      internalID: 947352851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_36
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2a800f9a02e4b9aad038869e3ba597
+      internalID: 1674789713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_37
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 7
+        width: 66
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea30c3cb2fef4e91838b44794266986
+      internalID: -86212964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_38
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 53
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3c275db0b4644ad9a8b93859afe0ce
+      internalID: -1698706249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_39
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 9
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24af0ee931b14442e9a342e06b3efbe3
+      internalID: -679665511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_40
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6aafdf9d60e648d2a0a0830906e5ad2
+      internalID: 1475848314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_41
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 16
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5a378d520334610ae617a4ab618f9c
+      internalID: -8129340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_42
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 16
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b59a762f6304a3298abaf63ea5b114
+      internalID: -671067889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_43
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 16
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5bc879c7e8f4bc5bcf42cdfdbb47ef
+      internalID: -904862883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_44
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 16
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53195d87878df40fca88abddfe28b2f1
+      internalID: 98489258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_45
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 16
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0dded475f23b438f98c1647ab8a7897
+      internalID: 486232482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_46
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 16
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d77b16fbf83434992937f1d679aa85
+      internalID: -417829363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_47
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 16
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0921ddaa09280473ba7853cde5ee86e0
+      internalID: -615778639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_48
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 16
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1050443af1c9d4770beb13ccced16a75
+      internalID: 171339262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_49
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 10
         width: 36
         height: 36
       alignment: 0
@@ -334,61 +1153,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9705d4e02df543a388019a8e2ffb706
-      internalID: -1869068505
+      spriteID: 5289f27e7795b42a98da6125f64f354b
+      internalID: -1752092348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_11
+      name: NightBorne_50
       rect:
         serializedVersion: 2
-        x: 706
-        y: 272
+        x: 820
+        y: 10
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558b6a54c843b400aa619159c0d05fcf
+      internalID: -1599518213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_51
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 10
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5632593ce7425432aac996728a5fc33d
+      internalID: -1901267443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightBorne_52
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 13
         width: 40
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01b340743bf594ee48d8a9bd40e1c85a
-      internalID: -247988573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_12
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 272
-        width: 34
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 820a0452278694a079c0f17aa181cd17
-      internalID: 473142011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_13
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 207
-        width: 32
         height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -397,20 +1216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8a3feb652b5347f8912cca980d2b665
-      internalID: -373266673
+      spriteID: cfc784d66efab4450af53902151ea872
+      internalID: -1635505205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_14
+      name: NightBorne_53
       rect:
         serializedVersion: 2
-        x: 73
-        y: 207
-        width: 32
-        height: 33
+        x: 1462
+        y: 17
+        width: 29
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +1237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 378a1ee0e0b05471c9795cde89b7794f
-      internalID: -1437284643
+      spriteID: cd02a72f0babd4ae0aa219593d6545dd
+      internalID: -1446286065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_15
+      name: NightBorne_54
       rect:
         serializedVersion: 2
-        x: 137
-        y: 207
-        width: 31
-        height: 32
+        x: 1543
+        y: 18
+        width: 26
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +1258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 362d7e011feca459285928a35b4e6561
-      internalID: -736827655
+      spriteID: 7c470622cd88b4e369c7c9e5e912ab02
+      internalID: 1755878711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_16
+      name: NightBorne_55
       rect:
         serializedVersion: 2
-        x: 201
-        y: 207
-        width: 35
-        height: 29
+        x: 1628
+        y: 25
+        width: 17
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,20 +1279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8ceaac4c03a74b74bc45f266c68d42b
-      internalID: -1740985390
+      spriteID: b976e19821efd4b05b78916d1c34bd51
+      internalID: 1837046765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_17
+      name: NightBorne_56
       rect:
         serializedVersion: 2
-        x: 277
-        y: 208
-        width: 25
-        height: 29
+        x: 1705
+        y: 24
+        width: 91
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,187 +1300,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0c5e79b461d94b96ad2a55c56fb2b20
-      internalID: -1967995891
+      spriteID: 988f3f68c1501444096f95f00efe5e8e
+      internalID: 1075877857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_18
+      name: NightBorne_57
       rect:
         serializedVersion: 2
-        x: 329
-        y: 207
-        width: 38
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2cd0f6bc9bab441f283ae5b11df1274e
-      internalID: -1315863280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_19
-      rect:
-        serializedVersion: 2
-        x: 361
-        y: 231
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c98354b7e89048cfb53fe5094df5b98
-      internalID: -1633771587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_20
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 225
-        width: 13
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef27350aa59dd4b3f9f8b2a2866ae4c9
-      internalID: -70706913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_21
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 228
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c416d7d82841a4600b9e0a501e85e250
-      internalID: 1366703135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_22
-      rect:
-        serializedVersion: 2
-        x: 521
-        y: 207
-        width: 42
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbe85aea3cf134654802e6cc4c2fd65e
-      internalID: 497803295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_23
-      rect:
-        serializedVersion: 2
-        x: 585
-        y: 207
-        width: 42
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 312aa675d5bb046a19ff7455d039df55
-      internalID: 1110473882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_24
-      rect:
-        serializedVersion: 2
-        x: 649
-        y: 207
-        width: 42
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47000757bb2fd49bd9466586c3bcdbfc
-      internalID: 426948682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_25
-      rect:
-        serializedVersion: 2
-        x: 713
-        y: 207
-        width: 42
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f1150ba3125c43f0aaa06bf7e0233da
-      internalID: 1057771996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_26
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 207
-        width: 18
+        x: 1176
+        y: 2
+        width: 7
         height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -670,470 +1321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7be6ebdfd61044dd586f0c4bee47a360
-      internalID: -1472449663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_27
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 207
-        width: 42
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95193bf9fedbe41c3bab5a9a770309a6
-      internalID: -691553302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_28
-      rect:
-        serializedVersion: 2
-        x: 457
-        y: 207
-        width: 42
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 099fc414e47d14c91bc5add387f252b4
-      internalID: 1025938739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_29
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 207
-        width: 42
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18dbb093a2ab84ae0b5be6b8fb00a5a4
-      internalID: 1835487344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_30
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 143
-        width: 36
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5913570dc6e754584a33d28b062ce14f
-      internalID: -645651527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_31
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 143
-        width: 35
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51ef6b1eec43d4909b0818586e6c7e5c
-      internalID: -1722997500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_32
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 143
-        width: 35
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a071fd03d91114f7fa89d705c491918a
-      internalID: 559130560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_33
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 143
-        width: 35
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b976a912b4fa24cdebb09e6145f28c6d
-      internalID: -1244350682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_34
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 143
-        width: 36
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a344cb4c57f754b8ab4ccdbb3ee5268f
-      internalID: -1471467250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_35
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 143
-        width: 36
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 194a257c14df04ed1974f5adc540be1d
-      internalID: 577546885
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_36
-      rect:
-        serializedVersion: 2
-        x: 389
-        y: 143
-        width: 36
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff2786785eadc403f975c076cf4c0f10
-      internalID: -341440143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_37
-      rect:
-        serializedVersion: 2
-        x: 452
-        y: 143
-        width: 38
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35983874e73bf4966bf3e8e3e7e5b301
-      internalID: -710022951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_38
-      rect:
-        serializedVersion: 2
-        x: 516
-        y: 143
-        width: 38
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 216eca6a2198d4c6dbf7b9cc67e22939
-      internalID: 506741271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_39
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 143
-        width: 38
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58728f0dfac9b4d61879986b03f020d9
-      internalID: 1769911323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_40
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 143
-        width: 37
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0293cb7d070043ca8d594b1dbb3fcc5
-      internalID: -1186374826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_41
-      rect:
-        serializedVersion: 2
-        x: 709
-        y: 143
-        width: 37
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b8e913d8a8f54ab182bb712056c5ffa
-      internalID: 615136218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_42
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 79
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 230a46335a5ae4914b8ca372928695b8
-      internalID: -706300222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_43
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 79
-        width: 34
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f2d8c1746bdd48ef8804ae81ab70147
-      internalID: -578628455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_44
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 79
-        width: 35
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c3314d995c664f919832f917ec2b391
-      internalID: -769572833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_45
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 79
-        width: 34
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8975dddbc356149bcb0c093948584340
-      internalID: 539449068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_46
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 15
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04ee3c1f9c25d4e8583d9ed77a64dd3e
-      internalID: -229916009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_47
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 15
-        width: 32
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 378a8b9feb7654791a8c07951bb90ad1
-      internalID: 304760789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_48
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 15
-        width: 32
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49ce4195788b64102a80a597fec52ece
-      internalID: -1291335634
+      spriteID: be7a6e782732c4a42b83b9ca44932be2
+      internalID: -956164853
       vertices: []
       indices: 
       edges: []
@@ -1149,55 +1338,64 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeleton enemy_0: 1791538878
-      Skeleton enemy_1: 1244051503
-      Skeleton enemy_10: -1869068505
-      Skeleton enemy_11: -247988573
-      Skeleton enemy_12: 473142011
-      Skeleton enemy_13: -373266673
-      Skeleton enemy_14: -1437284643
-      Skeleton enemy_15: -736827655
-      Skeleton enemy_16: -1740985390
-      Skeleton enemy_17: -1967995891
-      Skeleton enemy_18: -1315863280
-      Skeleton enemy_19: -1633771587
-      Skeleton enemy_2: 2146292855
-      Skeleton enemy_20: -70706913
-      Skeleton enemy_21: 1366703135
-      Skeleton enemy_22: 497803295
-      Skeleton enemy_23: 1110473882
-      Skeleton enemy_24: 426948682
-      Skeleton enemy_25: 1057771996
-      Skeleton enemy_26: -1472449663
-      Skeleton enemy_27: -691553302
-      Skeleton enemy_28: 1025938739
-      Skeleton enemy_29: 1835487344
-      Skeleton enemy_3: -1899554392
-      Skeleton enemy_30: -645651527
-      Skeleton enemy_31: -1722997500
-      Skeleton enemy_32: 559130560
-      Skeleton enemy_33: -1244350682
-      Skeleton enemy_34: -1471467250
-      Skeleton enemy_35: 577546885
-      Skeleton enemy_36: -341440143
-      Skeleton enemy_37: -710022951
-      Skeleton enemy_38: 506741271
-      Skeleton enemy_39: 1769911323
-      Skeleton enemy_4: 324056026
-      Skeleton enemy_40: -1186374826
-      Skeleton enemy_41: 615136218
-      Skeleton enemy_42: -706300222
-      Skeleton enemy_43: -578628455
-      Skeleton enemy_44: -769572833
-      Skeleton enemy_45: 539449068
-      Skeleton enemy_46: -229916009
-      Skeleton enemy_47: 304760789
-      Skeleton enemy_48: -1291335634
-      Skeleton enemy_5: -1504442404
-      Skeleton enemy_6: -502742509
-      Skeleton enemy_7: -460650695
-      Skeleton enemy_8: -1860871517
-      Skeleton enemy_9: -76109555
+      NightBorne_0: -1422128978
+      NightBorne_1: -1966057753
+      NightBorne_10: -2140600748
+      NightBorne_11: -1976344951
+      NightBorne_12: 2004708200
+      NightBorne_13: -1377172683
+      NightBorne_14: 1642509124
+      NightBorne_15: -1239445724
+      NightBorne_16: 915245523
+      NightBorne_17: -1371667772
+      NightBorne_18: -900216926
+      NightBorne_19: 292972972
+      NightBorne_2: 835195468
+      NightBorne_20: 1559495069
+      NightBorne_21: 263551908
+      NightBorne_22: -453977758
+      NightBorne_23: -1335608165
+      NightBorne_24: -612763583
+      NightBorne_25: 1557674888
+      NightBorne_26: -662788311
+      NightBorne_27: 635888409
+      NightBorne_28: 1940576477
+      NightBorne_29: -1647010287
+      NightBorne_3: -2065902703
+      NightBorne_30: -733240825
+      NightBorne_31: -1139603803
+      NightBorne_32: 1796702728
+      NightBorne_33: 2136504809
+      NightBorne_34: 1068928459
+      NightBorne_35: 947352851
+      NightBorne_36: 1674789713
+      NightBorne_37: -86212964
+      NightBorne_38: -1698706249
+      NightBorne_39: -679665511
+      NightBorne_4: 1602659698
+      NightBorne_40: 1475848314
+      NightBorne_41: -8129340
+      NightBorne_42: -671067889
+      NightBorne_43: -904862883
+      NightBorne_44: 98489258
+      NightBorne_45: 486232482
+      NightBorne_46: -417829363
+      NightBorne_47: -615778639
+      NightBorne_48: 171339262
+      NightBorne_49: -1752092348
+      NightBorne_5: 227420995
+      NightBorne_50: -1599518213
+      NightBorne_51: -1901267443
+      NightBorne_52: -1635505205
+      NightBorne_53: -1446286065
+      NightBorne_54: 1755878711
+      NightBorne_55: 1837046765
+      NightBorne_56: 1075877857
+      NightBorne_57: -956164853
+      NightBorne_6: -1252496800
+      NightBorne_7: 2101507858
+      NightBorne_8: -1357000151
+      NightBorne_9: 1192462044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

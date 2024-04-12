@@ -79,4 +79,9 @@ public class enemyBehavior : MonoBehaviour
         }
     }
 
+    public virtual void forSakeOfBinding()
+    {
+        Debug.Log("Enemy Spawned");
+    }
+
 }

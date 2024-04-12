@@ -9,10 +9,11 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] private GameObject skeletonFodder;
     [SerializeField] private GameObject ghost;
     [SerializeField] private GameObject pinkSlime;
+    [SerializeField] private GameObject knightBoss;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -59,8 +60,9 @@ public class enemySpawner : MonoBehaviour
                 }
             }
             else{
-                switch(rand%3){
+                switch(1){
                     case 1:
+                        Instantiate(knightBoss, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
                         break;
                     case 2:
                         break;
