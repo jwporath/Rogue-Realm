@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class enemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject skeletonWarrior;
+    [SerializeField] private GameObject necromancer;
+    [SerializeField] private GameObject skeletonFodder;
+    [SerializeField] private GameObject ghost;
+    [SerializeField] private GameObject pinkSlime;
     // Start is called before the first frame update
     void Start()
     {
-        createEnemy(1,false, this.gameObject);
+        
     }
 
     // Update is called once per frame
@@ -19,20 +23,24 @@ public class enemySpawner : MonoBehaviour
 
     public void createEnemy(int difficulty, bool boss, GameObject parent)
         {
-            int rand = 1; //UnityEngine.Random.Range(1,13);
+            int rand = UnityEngine.Random.Range(1,6);
             if(boss == false){
                 switch(rand){
                     case 1:
                         //Enemy Skeleton
-                        Instantiate(enemyPrefab, new UnityEngine.Vector3(0, 0, 0), UnityEngine.Quaternion.identity, parent.transform);
+                        Instantiate(skeletonWarrior, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
                         break;
                     case 2:
+                        Instantiate(necromancer, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
                         break;
                     case 3:
+                        Instantiate(skeletonFodder, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
                         break;
                     case 4:
+                        Instantiate(ghost, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
                         break;
                     case 5:
+                        Instantiate(pinkSlime, parent.transform.position, UnityEngine.Quaternion.identity, parent.transform);
                         break;
                     case 6:
                         break;
