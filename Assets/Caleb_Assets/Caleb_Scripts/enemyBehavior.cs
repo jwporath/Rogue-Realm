@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class skeletonBehavior : MonoBehaviour
+public class enemyBehavior : MonoBehaviour
 {
     GameObject Player;
     [SerializeField] float enemySpeed = 2f;
