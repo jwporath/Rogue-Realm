@@ -2,25 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
+using UnityEngine.UI; 
+using System;
 
 //PAUSED VIDEO AT 1:18:00
 
 public class Player : Entity
 {
-    private bool isFacingRight=true;
 
+    //------ FOR OBSERVER PATTERN ------
+    // Define a custom event delegate that includes event information
+    public event Action<string,float> ThingHappened;
+    // Method to trigger the event with specific information
+    public void DoThing(string eventType, float num)
+    {
+        ThingHappened?.Invoke(eventType,num);
+    }
+    //----------------------------------
+
+
+    //------ VARIABLES ------
     [SerializeField] private Transform groundCheck, headCheck;
     [SerializeField] private LayerMask groundLayer, brickLayer;
     [SerializeField] private string endScene;
-    PlayerSounds playerSounds = new PlayerSounds();
-    private float maxHealth, curHealth;
-    private int coins = 0;
-    private bool BCMode=false;
-
-    // private HealthBar healthBar;
+    [SerializeField] private Text coinText, speedText, jumpText;
     [SerializeField] private GameObject BCFace;
     [SerializeField] private HealthBar healthBar;
 
+    private float maxHealth, curHealth;
+    private int coins = 0;
+    private bool BCMode=false;
+    private bool isFacingRight=true;
+    PlayerSounds playerSounds = new PlayerSounds();    
+
+    //------ START ------
     protected override void Start(){
         base.Start();
         maxHealth=100;
@@ -29,10 +44,11 @@ public class Player : Entity
         // healthBar=GetComponentInChildren<HealthBar>();
         // healthBar=GameObject.FindGameObjectWithTag("HealthBarCanvas");
         // Debug.Log(healthBar);
-
+        coinText.text = coins.ToString();
+        speedText.text = this.speed.ToString();
+        jumpText.text = this.jumpingPower.ToString();
     }
-
-    // Update is called once per frame
+    //------ UPDATES ------
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
@@ -44,7 +60,7 @@ public class Player : Entity
         flip();
         currentState.UpdateState(this);
 
-        //TESTING HEALTH BAR
+        // for testing health bar
         if(Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("Taking damage");
@@ -57,20 +73,17 @@ public class Player : Entity
         }
 
     }
-
     private void FixedUpdate(){
         currentState.FixedUpdateState(this);
     }
 
-    private bool isGround(){
-        return Physics2D.OverlapCircle(groundCheck.position,0.2f,groundLayer);
+    //------ ANIMATIONS ------
+    private void Die()
+    {
+        // Destroy(gameObject);
+        Debug.Log("You died.");
+        SceneManager.LoadScene(endScene);
     }
-
-    // could use for power ups
-    // private bool isCollidingWithPowerUp(){
-    //     return Physics2D.OverlapCircle(headCheck.position,0.2f,brickLayer);
-    // }
-
     private void flip(){
         if(isFacingRight&&horizontal<0f || !isFacingRight&&horizontal>0f){
             isFacingRight=!isFacingRight;
@@ -79,17 +92,20 @@ public class Player : Entity
             transform.localScale=localScale;
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision){
-        // Use this for picking up stuff:
-        // if(collision.gameObject.tag=="Coin"&&isCollidingWithPowerUp()){
-        //     PickUp(collision.gameObject);
-        // }
-        currentState.OnCollisionEnter(this);
-    }
     public bool isPlayerFacingRight(){
         return isFacingRight;
     }
+
+    //------ MOVING ------
+    private void OnCollisionEnter2D(Collision2D collision){
+        currentState.OnCollisionEnter(this);
+    }
+    private bool isGround(){
+        return Physics2D.OverlapCircle(groundCheck.position,0.2f,groundLayer);
+    }
+
+
+    //------ PICKUPS/POWERUPS ------
     public void decreaseHealth(float damage){
         // make sure BC mode is off
         if(BCMode==false){
@@ -108,33 +124,24 @@ public class Player : Entity
             healthBar.UpdateHealthBar(maxHealth,curHealth); 
         }         
     }
-    public float getCurrentHealth(){
-        return curHealth;
-    }
-    public float getMaxHealth(){
-        return maxHealth;
-    }
-
     public void pickupCoins(int modifier){
         coins+=modifier;
-        Debug.Log(coins);
-    }
-    public int getNumCoins(){
-        return coins;
+        // Debug.Log(coins);
+        // coinText.text = coins.ToString();
+        DoThing("Coin",(float)coins);
     }
     public void increaseSpeed(float modifier){
         this.speed+=modifier;
+        // speedText.text = this.speed.ToString();
+        DoThing("Speed",this.speed);
     }
     public void increaseJumpingPower(float modifier){
         this.jumpingPower+=modifier;
+        // jumpText.text = this.jumpingPower.ToString();
+        DoThing("Jump",this.jumpingPower);
     }
 
-    private void Die()
-    {
-        // Destroy(gameObject);
-        Debug.Log("You died.");
-        SceneManager.LoadScene(endScene);
-    }
+    //------ MISC SETTERS ------
     public void BCModeON(){
         BCMode=true;
         BCFace.SetActive(true);
@@ -143,7 +150,16 @@ public class Player : Entity
         BCMode=false;
         BCFace.SetActive(false);
     }
-    public bool getBC(){
+
+    //------ GETTERS ------
+     public bool getBC(){
         return BCMode;
     }
+    public float getCurrentHealth(){
+        return curHealth;
+    }
+    public float getMaxHealth(){
+        return maxHealth;
+    }
+
 }
