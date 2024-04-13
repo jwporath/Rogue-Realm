@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Broom : MonoBehaviour
@@ -7,8 +8,6 @@ public class Broom : MonoBehaviour
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
     [SerializeField] public float weaponDamage;
-
-    
     public float timeUntilMelee;
     // public float attackRate = .7f;   // Attack rate in attacks per second
     // public float damage = 5;         // Damage inflicted by the broom

@@ -29,15 +29,6 @@ public class WeaponPickup : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        // Check if the collider is the player
-        if (other.CompareTag("Player"))
-        {
-            isInRange = false;
-        }
-    }
-
     void PickUpWeapon()
     {
         // Instantiate the weapon prefab

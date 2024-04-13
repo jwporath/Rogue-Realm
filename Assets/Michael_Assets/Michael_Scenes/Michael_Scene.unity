@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 319846349}
   - component: {fileID: 319846348}
   - component: {fileID: 319846350}
+  - component: {fileID: 319846351}
   m_Layer: 0
   m_Name: Machete
   m_TagString: Untagged
@@ -442,8 +443,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72059cd42da22314dbccd36deba67d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 0.8
-  damage: 7
+  anim: {fileID: 319846351}
+  meleeSpeed: 0
+  weaponDamage: 0
+  timeUntilMelee: 0
+--- !u!95 &319846351
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319846346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb69e4c247f2ccf4191eded73a3c6c4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &434068243
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +715,7 @@ GameObject:
   - component: {fileID: 653011521}
   - component: {fileID: 653011520}
   - component: {fileID: 653011522}
+  - component: {fileID: 653011523}
   m_Layer: 0
   m_Name: Shovel
   m_TagString: Untagged
@@ -822,8 +847,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3afdc32e478231459a93bc0f7a89c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1.2
-  damage: 5
+  anim: {fileID: 653011523}
+  meleeSpeed: 0
+  weaponDamage: 0
+  timeUntilMelee: 0
+--- !u!95 &653011523
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653011518}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f3899395c7ce9e40b1ded08ecd2e2af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &670185814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,6 +1544,7 @@ GameObject:
   - component: {fileID: 919774476}
   - component: {fileID: 919774475}
   - component: {fileID: 919774477}
+  - component: {fileID: 919774478}
   m_Layer: 0
   m_Name: PipeWrench
   m_TagString: Untagged
@@ -1627,8 +1676,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b969f6af16a28c04386309618588fd2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 0.8
-  damage: 6
+  anim: {fileID: 919774478}
+  meleeSpeed: 1
+  weaponDamage: 10
+  timeUntilMelee: 0
+--- !u!95 &919774478
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919774473}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aad2056b3487ca54b9e4070118a4e87e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &959217604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,6 +1870,7 @@ GameObject:
   - component: {fileID: 1286722968}
   - component: {fileID: 1286722967}
   - component: {fileID: 1286722969}
+  - component: {fileID: 1286722970}
   m_Layer: 0
   m_Name: Umbrella
   m_TagString: Untagged
@@ -1929,8 +2002,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e69d390aa215304083b796dd1ecec06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 0.5
-  damage: 4
+  anim: {fileID: 1286722970}
+  meleeSpeed: 1
+  weaponDamage: 10
+  timeUntilMelee: 0
+--- !u!95 &1286722970
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286722965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e463353883cab14bb4d2ba9bf66e5c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1291883725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,6 +2350,7 @@ GameObject:
   - component: {fileID: 1508208641}
   - component: {fileID: 1508208640}
   - component: {fileID: 1508208642}
+  - component: {fileID: 1508208643}
   m_Layer: 0
   m_Name: BattleAxe
   m_TagString: Untagged
@@ -2385,8 +2482,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c61749b19b2204eb03798e904c8187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1.5
-  damage: 9
+  anim: {fileID: 1508208643}
+  meleeSpeed: 0
+  weaponDamage: 0
+  timeUntilMelee: 0
+--- !u!95 &1508208643
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508208638}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6543c2eccbd56474fb9429544fdbf949, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1641085758
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,6 +2960,7 @@ GameObject:
   - component: {fileID: 2059171664}
   - component: {fileID: 2059171663}
   - component: {fileID: 2059171665}
+  - component: {fileID: 2059171666}
   m_Layer: 0
   m_Name: Clubber
   m_TagString: Untagged
@@ -2971,8 +3092,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf8784df490ffe46977ea95befa99d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1.5
-  damage: 10
+  anim: {fileID: 2059171666}
+  meleeSpeed: 1
+  weaponDamage: 10
+  timeUntilMelee: 0
+--- !u!95 &2059171666
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059171661}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a23739e9cf70b14eaea58078bb3b301, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2100916302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,6 +3129,7 @@ GameObject:
   - component: {fileID: 2100916305}
   - component: {fileID: 2100916304}
   - component: {fileID: 2100916306}
+  - component: {fileID: 2100916307}
   m_Layer: 0
   m_Name: Hammer
   m_TagString: Untagged
@@ -3116,8 +3261,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938be77c9ed35784781ef9bb7499334c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1.6
-  damage: 8
+  anim: {fileID: 2100916307}
+  meleeSpeed: 0
+  weaponDamage: 0
+  timeUntilMelee: 0
+--- !u!95 &2100916307
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100916302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f2630c0704194f49b3938ffc4a5d11b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2119339178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,7 +3431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2119339183}
-  meleeSpeed: 1
+  meleeSpeed: 2
   weaponDamage: 10
   timeUntilMelee: 0
 --- !u!95 &2119339183
@@ -3541,6 +3709,7 @@ GameObject:
   - component: {fileID: 5206137665445838774}
   - component: {fileID: 4900786828752100180}
   - component: {fileID: 5206137665445838775}
+  - component: {fileID: 5206137665445838776}
   m_Layer: 0
   m_Name: BaseballBat
   m_TagString: Untagged
@@ -3675,8 +3844,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66db2beebc98cf4e9d685fe7e2aae86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 0.9
-  damage: 6
+  anim: {fileID: 5206137665445838776}
+  meleeSpeed: 0
+  weaponDamage: 0
+  timeUntilMelee: 0
+--- !u!95 &5206137665445838776
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573363925008122317}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1addf890625c364f88ae8644c2eac05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5219701659303644235
 MonoBehaviour:
   m_ObjectHideFlags: 0
