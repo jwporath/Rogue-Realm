@@ -179,16 +179,21 @@ public class Level : MonoBehaviour
             
         }
 
-        // Generate Enemies
-        Component[] ESpawns = RoomMap[x, y].gameObject.GetComponentsInChildren<Component>();
+        // Generate Enemies and Items
+        Component[] Spawns = RoomMap[x, y].gameObject.GetComponentsInChildren<Component>();
 
-        foreach (Component i in ESpawns)
+        foreach (Component i in Spawns)
         {
             if (i.tag == "EnemySpawn")
             {
                 if (UnityEngine.Random.Range(1, 3) == 1)
                     EnemySpawner.createEnemy(1, false, i.gameObject);
             }
+            // else if (i.tag == "ItemSpawn")
+            // {
+            //     if (UnityEngine.Random.Range(1, 3) == 1)
+            //         ItemSpawner.createItem();
+            // }
         }
 
         // Recursive generation calls
