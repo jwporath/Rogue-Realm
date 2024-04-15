@@ -1,3 +1,4 @@
+// BossDoor.cs - Defines BossDoor Object
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class BossDoor : MonoBehaviour
     private GameObject player;
     private GameObject gameCam;
 
-    // Start is called before the first frame update
+    // find player and camera Objects
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

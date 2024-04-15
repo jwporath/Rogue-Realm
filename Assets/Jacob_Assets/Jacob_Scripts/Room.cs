@@ -1,6 +1,9 @@
+// Room.cs - defines Room object
 using System.Collections;
 using System.Collections.Generic;
+using Codice.Client.BaseCommands;
 using Codice.Client.Common.GameUI;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class Room : MonoBehaviour
@@ -14,6 +17,7 @@ public class Room : MonoBehaviour
     private int y;
     private enemyBehavior[] enemies;
 
+    // Find child door objects, default doors to unlocked.
     void Awake()
     {
         LeftDoor = this.GetComponentInChildren<LDoor>(true);
@@ -23,6 +27,7 @@ public class Room : MonoBehaviour
         Locked = false;
     }
 
+    // Find enemies in this instance of room. If enemies exist, lock doors.
     void Start()
     {
         enemies = this.GetComponentsInChildren<enemyBehavior>();
@@ -30,7 +35,7 @@ public class Room : MonoBehaviour
             Locked = true;
     }
 
-    // Update is called once per frame
+    // Check lock status
     void Update()
     {
         if(Locked == true)
@@ -42,6 +47,7 @@ public class Room : MonoBehaviour
     //     Debug.Log("Called Room Debug Message");
     // }
 
+    // Checks if enemies are still alive and updates locked status appropriately.
     virtual public bool isLocked()
     {
         bool AllDead = true;
@@ -56,6 +62,7 @@ public class Room : MonoBehaviour
         return Locked;
     }
 
+    // Enables the top door object of the room
     public void EnableTopDoor()
     {
         // Enable Door Object
@@ -72,6 +79,7 @@ public class Room : MonoBehaviour
         }
     }
 
+    // Enables the bottom door object of the room
     public void EnableBottomDoor()
     {
         // Enable Door Object
@@ -88,6 +96,7 @@ public class Room : MonoBehaviour
         }
     }
 
+    // Enables the Right door object of the room
     public void EnableRightDoor()
     {
         // Enable Door Object
@@ -104,6 +113,7 @@ public class Room : MonoBehaviour
         }
     }
 
+    // Enables the left door object of the room
     public void EnableLeftDoor()
     {
         // Enable Door Object
@@ -120,21 +130,25 @@ public class Room : MonoBehaviour
         }
     }
 
+    // sets the x value of the room
     public void SetX(int value)
     {
         x = value;
     }
 
+    // returns x value
     public int GetX()
     {
         return x;
     }
 
+    // sets the y value of the room
     public void SetY(int value)
     {
         y = value;
     }
 
+    // returns y value
     public int GetY()
     {
         return y;

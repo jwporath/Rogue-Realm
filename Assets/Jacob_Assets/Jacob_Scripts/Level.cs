@@ -1,3 +1,4 @@
+// Level.cs - Defines Level object
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -20,11 +21,13 @@ public class Level : MonoBehaviour
 
     private int NumRooms;
      
+    // start level generation
     void Start()
     {
         LoadLevel();
     }
 
+    // Places SpawnRoom in RoomMap[,] and generates the level
     public void LoadLevel()
     {
         // Set all elements in RoomMap to null
@@ -52,6 +55,8 @@ public class Level : MonoBehaviour
         Debug.Log(NumRooms);
     }
 
+    // Removes all Rooms from the scene and restores the SpawnRoom, player, and Main camera to their original positions
+    // leaves the scene ready to load a new level
     public void ClearLevel()
     {
         // Delete all generated rooms
@@ -78,6 +83,7 @@ public class Level : MonoBehaviour
         c.transform.position = position;
     }
 
+    // Calls the recursive generation function in each direction (if possible)
     private void StartGeneration()
     {
         RoomMap[4, 4].EnableRightDoor();
@@ -103,6 +109,7 @@ public class Level : MonoBehaviour
         }    
     }
 
+    // Fully generates a room, then recursively calls itself to generate neighboring rooms.
     private void GenerateRoom(int x, int y, Room Caller)
     {
         // Create room
@@ -281,6 +288,7 @@ public class Level : MonoBehaviour
         }
     }
 
+    // Creates a BossRoom in an empty RoomMap slot that neighbors another room.
     private void GenerateBossRoom()
     {
         int x = 0;
@@ -293,6 +301,7 @@ public class Level : MonoBehaviour
         GameObject BossRoom = Instantiate(BossRoomPrefab, new UnityEngine.Vector3(0, 0, 0), UnityEngine.Quaternion.identity, this.gameObject.transform);
         BossRoom b = this.GetComponentInChildren<BossRoom>();
 
+        // Create Boss
         Component[] c = b.GetComponentsInChildren<Component>();
         foreach (Component i in c)
         {
@@ -375,6 +384,7 @@ public class Level : MonoBehaviour
         Debug.Log("created BossRoom");
     }
 
+    // Returns a Room Object from RoomMap
     public Room GetRoom(int x, int y)
     {
         if(x < 9 && x >= 0 && y < 9 && y >= 0)
