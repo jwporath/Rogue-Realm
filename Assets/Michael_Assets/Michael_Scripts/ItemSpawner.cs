@@ -26,7 +26,7 @@ public class ItemSpawner : MonoBehaviour
 
     public void createItem(GameObject parent)
     {
-        int random = UnityEngine.Random.Range(0,7);
+        int random = UnityEngine.Random.Range(0,16);
         switch(random)
         {
             case 0:
