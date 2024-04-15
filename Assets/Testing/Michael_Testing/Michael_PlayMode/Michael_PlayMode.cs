@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class PlayModeTesting
+public class Michael_PlayMode
 {
     [UnityTest]
     public IEnumerator SelectRandomWeapon_ReturnsValidWeapon()
@@ -61,5 +61,39 @@ public class PlayModeTesting
         string[] validPowerup = {"DamageIncrease", "JumpIncrease", "SpeedIncrease", "AttackRateIncrease"};
         return System.Array.IndexOf(validPowerup, powerup) != -1;
     }
+
+    // [UnityTest]
+    // public IEnumerator SpeedIncrease_FunctionIncreasesSpeed()
+    // {
+    //     // Create a GameObject to represent the player
+    //     GameObject playerObject = new GameObject("Player");
+    //     // Add a Rigidbody component to the player GameObject (assuming the player has a Rigidbody)
+    //     Rigidbody playerRigidbody = playerObject.AddComponent<Rigidbody>();
+    //     // Add a PlayerController component to the player GameObject
+    //     Entity playerController = playerObject.AddComponent<Entity>();
+
+    //     // Set the initial speed of the player
+    //     float initialSpeed = playerController.speed;
+
+    //     // Create a GameObject to represent the SpeedIncrease object
+    //     GameObject speedIncreaseObject = new GameObject("SpeedBoost");
+    //     // Add a Collider component to the SpeedIncrease GameObject (assuming it has a collider)
+    //     BoxCollider speedIncreaseCollider = speedIncreaseObject.AddComponent<BoxCollider>();
+    //     // Set the position of the SpeedIncrease object to be under the player
+    //     speedIncreaseObject.transform.position = playerObject.transform.position;
+
+    //     // Trigger the SpeedIncrease function by simulating a collision with the SpeedIncrease object
+    //     speedIncreaseObject.OnTriggerEnter2D(speedIncreaseCollider);
+
+    //     // Wait for one frame to allow the SpeedIncrease function to execute
+    //     yield return null;
+
+    //     // Check if the player's speed has increased
+    //     Assert.AreEqual(initialSpeed + 1f, playerController.speed, "Player speed did not increase after walking over SpeedIncrease object");
+
+    //     // Clean up: Destroy the player and SpeedIncrease GameObjects
+    //     GameObject.Destroy(playerObject);
+    //     GameObject.Destroy(speedIncreaseObject);
+    // }
 }
 
