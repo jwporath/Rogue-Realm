@@ -7,6 +7,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     [SerializeField] private enemySpawner EnemySpawner;
+    [SerializeField] private ItemSpawner ItemSpawner;
     [SerializeField] private GameObject RoomPrefab;
     [SerializeField] private GameObject BossRoomPrefab;
     [SerializeField] private GameObject SpawnRoomPrefab;
@@ -196,11 +197,16 @@ public class Level : MonoBehaviour
                 if (UnityEngine.Random.Range(1, 3) == 1)
                     EnemySpawner.createEnemy(1, false, i.gameObject);
             }
-            // else if (i.tag == "ItemSpawn")
-            // {
-            //     if (UnityEngine.Random.Range(1, 3) == 1)
-            //         ItemSpawner.createItem();
-            // }
+            else if (i.tag == "ItemSpawn")
+            {
+                if (UnityEngine.Random.Range(1, 3) == 1)
+                    ItemSpawner.createItem(i.gameObject);
+                // if (true)
+                // {
+                //     ItemSpawner.createItem(i.gameObject);
+                //     Debug.Log("Created Item.");
+                // }
+            }
         }
 
         // Recursive generation calls
