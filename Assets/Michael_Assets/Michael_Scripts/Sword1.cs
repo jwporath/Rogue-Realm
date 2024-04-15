@@ -7,10 +7,13 @@ public class Sword1 : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
-    [SerializeField] public float weaponDamage;
+    //[SerializeField] public float weaponDamage;
+    public int weaponDamage = 8;
 
     
     public float timeUntilMelee;
+
+    private enemyAttributes enemy;
     //public float attackRate = 1f;   // Attack rate in attacks per second
     //public float damage = 7;         // Damage inflicted by the broom
 
@@ -25,6 +28,10 @@ public class Sword1 : MeleeWeaponBase
     //         Debug.Log("Sword attack!");
     //     }
     // }
+    void Start()
+    {
+        enemy = FindObjectOfType<enemyAttributes>();
+    }
     public override void Attack()
     {
         // Implement sword attack logic
@@ -59,6 +66,7 @@ public class Sword1 : MeleeWeaponBase
         {
             //Need to talk to Caleb about this "TakeDamage" function in Enemy script
             //other.GetComponent<Enenmy>().TakeDamage(weaponDamage);
+           // enemy.health
             Debug.Log("Enemy hit!!");
         }
     }

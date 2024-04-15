@@ -43,6 +43,15 @@ public class BattleAxe : MeleeWeaponBase
         timeUntilMelee = 0;
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Enemy")
+        {
+            //Need to talk to Caleb about this "TakeDamage" function in Enemy script
+            Debug.Log("Enemy hit!!");
+        }
+    }
+
     // void Attack()
     // {
     //     // Perform the attack logic here, for example, damaging enemies
