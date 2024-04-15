@@ -12,12 +12,14 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
     // [SerializeField] private AudioClip compressClip, uncompressClip; 
     // [SerializeField] private AudioSource audioSource; 
 
-    public virtual void OnPointerDown(PointerEventData eventData) { 
+    // public void OnPointerDown(PointerEventData eventData) {          // STATIC BIND
+    public virtual void OnPointerDown(PointerEventData eventData) {     // DYNAMIC BIND
         img.sprite = pressed; 
         // audioSource.PlayOneShot(compressClip); 
     } 
 
-    public virtual void OnPointerUp(PointerEventData eventData){ 
+    // public void OnPointerUp(PointerEventData eventData){             // STATIC BIND
+    public virtual void OnPointerUp(PointerEventData eventData){        // DYNAMIC BIND
         img.sprite=up; 
         // buttonText=GetComponent<TMP_Text>();
         // audioSource.PlayOneShot(uncompressClip); 

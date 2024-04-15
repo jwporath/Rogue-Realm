@@ -11,6 +11,7 @@ TagManager:
   - EndLevel
   - EnemySpawn
   - ItemSpawn
+  - Button
   layers:
   - Default
   - TransparentFX

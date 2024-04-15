@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI; 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private int _health;
-    [SerializeField] private Slider _healthBar;
     [SerializeField] private float _timeToDrain=0.2f;
     [SerializeField] private Gradient _healthBarGradient;
     private float _target=1f;
@@ -26,8 +24,6 @@ public class HealthBar : MonoBehaviour
         drainHealthBarCoroutine=StartCoroutine(DrainHealthBar());
         CheckHealthBarGradient();
     }
-
-
     private IEnumerator DrainHealthBar()
     {
         float _fillAmount=fill.fillAmount;
@@ -44,7 +40,6 @@ public class HealthBar : MonoBehaviour
             yield return null;
         }
     }
-
     private void CheckHealthBarGradient()
     {
         _newHealthBarColor=_healthBarGradient.Evaluate(_target);

@@ -13,7 +13,8 @@ public class BCButton : ClickyButton
     [SerializeField] private Text playText; 
     [SerializeField] private Vector3 moveOffset; 
 
-    public override void OnPointerDown(PointerEventData eventData) { 
+    // public void OnPointerDown(PointerEventData eventData) {          // STATIC BIND
+    public override void OnPointerDown(PointerEventData eventData) {    // DYNAMIC BIND
         img.sprite = pressed; 
         // audioSource.PlayOneShot(compressClip); 
         if (playText != null) { 
@@ -21,7 +22,8 @@ public class BCButton : ClickyButton
         } 
     }
 
-    public override void OnPointerUp(PointerEventData eventData){ 
+    // public void OnPointerUp(PointerEventData eventData){             // STATIC BIND
+    public override void OnPointerUp(PointerEventData eventData){       // DYNAMIC BIND
         img.sprite=up; 
         // buttonText=GetComponent<TMP_Text>();
         // audioSource.PlayOneShot(uncompressClip); 

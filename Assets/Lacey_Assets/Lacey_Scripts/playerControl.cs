@@ -24,10 +24,13 @@ public class Player : Entity
     //------ VARIABLES ------
     [SerializeField] private Transform groundCheck, headCheck;
     [SerializeField] private LayerMask groundLayer, brickLayer;
-    [SerializeField] private string endScene;
-    [SerializeField] private Text coinText, speedText, jumpText;
+    // [SerializeField] private string endScene;
+    // [SerializeField] private Text coinText, speedText, jumpText;
     [SerializeField] private GameObject BCFace;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private GameObject endCanvas; 
+    [SerializeField] private Text scoreText;
+    private string finalScoreStr="Final Score:\n";
 
     private float maxHealth, curHealth;
     private int coins = 0;
@@ -36,17 +39,18 @@ public class Player : Entity
     PlayerSounds playerSounds = new PlayerSounds();    
 
     //------ START ------
-    protected override void Start(){
+    // protected override void Start(){
+    void Awake(){
         base.Start();
         maxHealth=100;
         curHealth=maxHealth;
         coins=0;
-        // healthBar=GetComponentInChildren<HealthBar>();
-        // healthBar=GameObject.FindGameObjectWithTag("HealthBarCanvas");
-        // Debug.Log(healthBar);
-        coinText.text = coins.ToString();
-        speedText.text = this.speed.ToString();
-        jumpText.text = this.jumpingPower.ToString();
+        // coinText.text = coins.ToString();
+        // speedText.text = this.speed.ToString();
+        // jumpText.text = this.jumpingPower.ToString();
+        DoThing("Coin",(float)coins);
+        DoThing("Speed",this.speed);
+        DoThing("Jump",this.jumpingPower);
     }
     //------ UPDATES ------
     void Update()
@@ -81,8 +85,11 @@ public class Player : Entity
     private void Die()
     {
         // Destroy(gameObject);
+        string displayTxt = finalScoreStr+coins.ToString()+this.jumpingPower.ToString()+this.speed.ToString();
+        scoreText.text=displayTxt;
+        endCanvas.SetActive(true); 
         Debug.Log("You died.");
-        SceneManager.LoadScene(endScene);
+        // SceneManager.LoadScene(endScene);
     }
     private void flip(){
         if(isFacingRight&&horizontal<0f || !isFacingRight&&horizontal>0f){
@@ -91,9 +98,6 @@ public class Player : Entity
             localScale.x*=-1f;
             transform.localScale=localScale;
         }
-    }
-    public bool isPlayerFacingRight(){
-        return isFacingRight;
     }
 
     //------ MOVING ------
@@ -160,6 +164,9 @@ public class Player : Entity
     }
     public float getMaxHealth(){
         return maxHealth;
+    }
+    public bool isPlayerFacingRight(){
+        return isFacingRight;
     }
 
 }
