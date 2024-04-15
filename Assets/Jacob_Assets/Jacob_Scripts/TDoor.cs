@@ -1,3 +1,4 @@
+// TDoor.cs - defines Top door object
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class TDoor : MonoBehaviour
     private GameObject player;
     private GameObject gameCam;
     private Room parentRoom;
+    // On first frame, find player, find camera, find parent room object.
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -15,6 +17,7 @@ public class TDoor : MonoBehaviour
         parentRoom = this.GetComponentInParent<Room>();
     }
 
+    // Check if player is in range, doors are unlocked, and player tries to use a door.
     void Update()
     {
         double XDif = Mathf.Abs(this.transform.position.x - player.transform.position.x);
@@ -22,6 +25,7 @@ public class TDoor : MonoBehaviour
 
         if (Input.GetKeyDown("e") && XDif < 1.5 && YDif < 1 && !parentRoom.isLocked())
         {
+            // move player and camera to appropriate x, y position
             Vector3 pos = new Vector3(player.transform.position.x, player.transform.position.y + 5f, player.transform.position.z);
             player.transform.position = pos;
 
