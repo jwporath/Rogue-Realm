@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyBehavior : MonoBehaviour
+public class enemyBehavior : enemyAttributes
 {
     GameObject Player;
     [SerializeField] float enemySpeed = 2f;
@@ -46,11 +46,14 @@ public class enemyBehavior : MonoBehaviour
             localScale.x*=-1f;
             transform.localScale=localScale;
         }
+        if(this.health <= 0)
+        {
+            dead = true;
+        }
         if(dead)
         {
             this.gameObject.SetActive(false);
         }
-
     }
 
     
@@ -71,12 +74,20 @@ public class enemyBehavior : MonoBehaviour
         return dead;
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player")
+        if(col.gameObject.tag == "Weapon")
         {
-            dead = true;
-        }
+            Sword1 sword = col.gameObject.GetComponent<Sword1>();
+            float damageTaken = sword.weaponDamage;
+             this.health -= (int)damageTaken;
+             Debug.Log("Enemy health reduced by "+damageTaken);
+         }
+        // if(col.gameObject.tag == "Player")
+        // {
+        //     Debug.Log("Player Collision");
+        //     this.health -= 100;
+        // }
     }
 
     public virtual void forSakeOfBinding()
