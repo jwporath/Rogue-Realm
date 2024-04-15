@@ -474,6 +474,9 @@ MonoBehaviour:
   brickLayer:
     serializedVersion: 2
     m_Bits: 0
+  coinText: {fileID: 1919340117}
+  speedText: {fileID: 731818948}
+  jumpText: {fileID: 291041382}
   BCFace: {fileID: 1019185892}
   healthBar: {fileID: 1610721257}
   endCanvas: {fileID: 254705646}
