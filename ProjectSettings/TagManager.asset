@@ -12,6 +12,7 @@ TagManager:
   - EnemySpawn
   - ItemSpawn
   - Button
+  - Weapon
   layers:
   - Default
   - TransparentFX

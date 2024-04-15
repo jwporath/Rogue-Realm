@@ -4295,6 +4295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword1
       objectReference: {fileID: 0}
+    - target: {fileID: 865043746193415094, guid: a58963f1fee6166498d005d2c1afd780, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 7580933406047184495, guid: a58963f1fee6166498d005d2c1afd780, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2900004
@@ -4408,6 +4412,10 @@ PrefabInstance:
     - target: {fileID: 87024557827058289, guid: 1eae95b92af1f054c99f4db6645d08f6, type: 3}
       propertyPath: m_Name
       value: BattleAxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 87024557827058289, guid: 1eae95b92af1f054c99f4db6645d08f6, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 3415868870662724566, guid: 1eae95b92af1f054c99f4db6645d08f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4568,6 +4576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipeWrench
       objectReference: {fileID: 0}
+    - target: {fileID: 6318906045527230494, guid: 31c4fa58725ef2e419224ae29d397f15, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4642,6 +4654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hammer
       objectReference: {fileID: 0}
+    - target: {fileID: 736077587165703247, guid: 994417df47935d24b9d831f5ce5df76c, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 5379637077546622591, guid: 994417df47935d24b9d831f5ce5df76c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.2899995
@@ -4698,6 +4714,10 @@ PrefabInstance:
     - target: {fileID: 6971011936234077224, guid: 947df885f72813748bd02acb30e86b4f, type: 3}
       propertyPath: m_Name
       value: Shovel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971011936234077224, guid: 947df885f72813748bd02acb30e86b4f, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 8883688388646268210, guid: 947df885f72813748bd02acb30e86b4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4811,6 +4831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clubber
       objectReference: {fileID: 0}
+    - target: {fileID: 4483154226718803199, guid: 0afc210ca476eac4aa08701c98dcae2a, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4850,6 +4874,10 @@ PrefabInstance:
     - target: {fileID: 2689101085286710620, guid: e3ea7f0f82765e848b18e76d692017d4, type: 3}
       propertyPath: m_Name
       value: Umbrella
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689101085286710620, guid: e3ea7f0f82765e848b18e76d692017d4, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 3831242805050559744, guid: e3ea7f0f82765e848b18e76d692017d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4907,6 +4935,10 @@ PrefabInstance:
     - target: {fileID: 7945813941345175638, guid: ed3f2c5fdac851642b11023799f45e3c, type: 3}
       propertyPath: m_Name
       value: Machete
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945813941345175638, guid: ed3f2c5fdac851642b11023799f45e3c, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 8537757968621430436, guid: ed3f2c5fdac851642b11023799f45e3c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5062,6 +5094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Broom
       objectReference: {fileID: 0}
+    - target: {fileID: 6822738667466903232, guid: 141c94608c70303428067a51ef3bf1f0, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5078,6 +5114,10 @@ PrefabInstance:
     - target: {fileID: 475237724172315431, guid: b9038cd88c614024c8639c1f873549c2, type: 3}
       propertyPath: m_Name
       value: BaseballBat
+      objectReference: {fileID: 0}
+    - target: {fileID: 475237724172315431, guid: b9038cd88c614024c8639c1f873549c2, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 6368354194289305557, guid: b9038cd88c614024c8639c1f873549c2, type: 3}
       propertyPath: m_LocalPosition.x
