@@ -13,7 +13,7 @@ public class Sword1 : MeleeWeaponBase
     
     public float timeUntilMelee;
 
-    private enemyAttributes enemy;
+    //private enemyAttributes enemy;
     //public float attackRate = 1f;   // Attack rate in attacks per second
     //public float damage = 7;         // Damage inflicted by the broom
 
@@ -30,7 +30,7 @@ public class Sword1 : MeleeWeaponBase
     // }
     void Start()
     {
-        enemy = FindObjectOfType<enemyAttributes>();
+        //enemy = FindObjectOfType<enemyAttributes>();
     }
     public override void Attack()
     {
@@ -66,7 +66,6 @@ public class Sword1 : MeleeWeaponBase
         {
             //Need to talk to Caleb about this "TakeDamage" function in Enemy script
             //other.GetComponent<Enenmy>().TakeDamage(weaponDamage);
-           // enemy.health
             Debug.Log("Enemy hit!!");
         }
     }
