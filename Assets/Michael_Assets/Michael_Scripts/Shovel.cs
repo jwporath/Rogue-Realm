@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shovel : MonoBehaviour
+public class Shovel : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
@@ -15,6 +15,14 @@ public class Shovel : MonoBehaviour
     // public float damage = 5;         // Damage inflicted by the broom
 
     // private float nextAttackTime = 0f;  // Time when the broom can next attack
+
+    public override void Attack()
+    {
+        // Implement sword attack logic
+        Update();
+        Debug.Log("Shovel attacks for " + weaponDamage + " damage!");
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,10 +46,10 @@ public class Shovel : MonoBehaviour
         timeUntilMelee = 0;
     }
 
-    void Attack()
-    {
-        // Perform the attack logic here, for example, damaging enemies
-        Debug.Log("Broom attacks for " + weaponDamage + " damage!");
-    }
+    // void Attack()
+    // {
+    //     // Perform the attack logic here, for example, damaging enemies
+    //     Debug.Log("Broom attacks for " + weaponDamage + " damage!");
+    // }
 }
 

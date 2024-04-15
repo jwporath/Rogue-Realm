@@ -3650,7 +3650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3965268558578398841
 Transform:
   m_ObjectHideFlags: 0
@@ -3894,6 +3894,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   endScene: 
+  coinText: {fileID: 0}
+  speedText: {fileID: 0}
+  jumpText: {fileID: 0}
   BCFace: {fileID: 0}
   healthBar: {fileID: 859619773}
 --- !u!1 &5444738612588839565

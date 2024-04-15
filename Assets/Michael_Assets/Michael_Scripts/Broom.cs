@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Broom : MonoBehaviour
+public class Broom : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
@@ -14,17 +14,17 @@ public class Broom : MonoBehaviour
 
     //private float nextAttackTime = 0f;  // Time when the broom can next attack
 
+    public override void Attack()
+    {
+        // Implement sword attack logic
+        Update();
+        Debug.Log("Broom attacks for " + weaponDamage + " damage!");
+
+    }
+
     // Update is called once per frame
     private void Update()
     {
-        // // If the player clicks the mouse button and enough time has passed since the last attack
-        // if (Input.GetButtonDown("Fire1") && Time.time >= nextAttackTime)
-        // {
-        //     // Perform the attack
-        //     Attack();
-        //     // Set the next attack time based on the attack rate
-        //     nextAttackTime = Time.time + 1f / attackRate;
-        // }
         if(timeUntilMelee <= 0f)
         {
             // If the player presses the 'a' key and enough time has passed since the last attack
@@ -50,15 +50,14 @@ public class Broom : MonoBehaviour
         if(other.tag == "Enemy")
         {
             //Need to talk to Caleb about this "TakeDamage" function in Enemy script
-            //other.GetComponent<Enenmy>().TakeDamage(weaponDamage);
             Debug.Log("Enemy hit!!");
         }
     }
 
-    void Attack()
-    {
-        // Perform the attack logic here, for example, damaging enemies
-        Debug.Log("Broom attacks for " + weaponDamage + " damage!");
-    }
+    // void Attack()
+    // {
+    //     // Perform the attack logic here, for example, damaging enemies
+    //     Debug.Log("Broom attacks for " + weaponDamage + " damage!");
+    // }
 }
 

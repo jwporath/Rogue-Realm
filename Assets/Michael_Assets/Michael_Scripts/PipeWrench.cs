@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PipeWrench : MonoBehaviour
+public class PipeWrench : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
@@ -14,6 +14,14 @@ public class PipeWrench : MonoBehaviour
     // public float damage = 6;         // Damage inflicted by the broom
 
     // private float nextAttackTime = 0f;  // Time when the broom can next attack
+
+    public override void Attack()
+    {
+        // Implement sword attack logic
+        Update();
+        Debug.Log("Pipe wrench attacks for " + weaponDamage + " damage!");
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -37,10 +45,10 @@ public class PipeWrench : MonoBehaviour
         timeUntilMelee = 0;
     }
 
-    void Attack()
-    {
-        // Perform the attack logic here, for example, damaging enemies
-        Debug.Log("Broom attacks for " + weaponDamage + " damage!");
-    }
+    // void Attack()
+    // {
+    //     // Perform the attack logic here, for example, damaging enemies
+    //     Debug.Log("Broom attacks for " + weaponDamage + " damage!");
+    // }
 }
 

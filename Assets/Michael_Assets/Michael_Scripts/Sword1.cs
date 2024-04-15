@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Sword1 : MonoBehaviour
+public class Sword1 : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
@@ -16,7 +16,23 @@ public class Sword1 : MonoBehaviour
 
     //private float nextAttackTime = 0f;  // Time when the broom can next attack
 
-    // Update is called once per frame
+    // Sword.cs
+    // public class Sword : MeleeWeaponBase
+    // {
+    //     public override void Attack()
+    //     {
+    //         // Implement sword attack logic
+    //         Debug.Log("Sword attack!");
+    //     }
+    // }
+    public override void Attack()
+    {
+        // Implement sword attack logic
+        Update();
+        Debug.Log("Sword attacks for " + weaponDamage + " damage!");
+
+    }
+
     private void Update()
     {
         if(timeUntilMelee <= 0f)

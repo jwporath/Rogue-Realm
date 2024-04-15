@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Machete : MonoBehaviour
+public class Machete : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
@@ -12,6 +12,14 @@ public class Machete : MonoBehaviour
     // public float damage = 7;         // Damage inflicted by the broom
 
     // private float nextAttackTime = 0f;  // Time when the broom can next attack
+
+    public override void Attack()
+    {
+        // Implement sword attack logic
+        Update();
+        Debug.Log("Machete attacks for " + weaponDamage + " damage!");
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -35,10 +43,10 @@ public class Machete : MonoBehaviour
         timeUntilMelee = 0;
     }
 
-    void Attack()
-    {
-        // Perform the attack logic here, for example, damaging enemies
-        Debug.Log("Broom attacks for " + weaponDamage + " damage!");
-    }
+    // void Attack()
+    // {
+    //     // Perform the attack logic here, for example, damaging enemies
+    //     Debug.Log("Broom attacks for " + weaponDamage + " damage!");
+    // }
 }
 

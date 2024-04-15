@@ -24,6 +24,12 @@ public class TestScript
         Debug.Log("fireball creation test...Successful!");
     }
 
+    // [Test]
+    // public void RandomWeaponSelecting()
+    // {
+    //     GameObject weapon = new GameObject(WeaponSelector.SelectRandomWeapon())
+    // }
+
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     // [UnityTest]

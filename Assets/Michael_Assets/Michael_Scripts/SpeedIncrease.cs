@@ -19,14 +19,14 @@ public class SpeedIncrease : MonoBehaviour
         // Check if the collider is the player and if the powerup has not already been picked up
         if (other.CompareTag("Player") && !hasBeenPickedUp)
         {
-            // Generate a random number between 1 and 3
-            float randomSpeedAmount = 1;
+            // Increase player speed by 1
+            float speedAmount = 1;
 
             // Add the random speed powerup amount to the player
             
-            Debug.Log("Player has increase speed by "+randomSpeedAmount+"!!");
+            Debug.Log("Player has increase speed by "+ speedAmount +"!!");
 
-            player.increaseSpeed(randomSpeedAmount);
+            player.increaseSpeed(speedAmount);
             // Play pickup sound
             /*if (pickupSound != null)
             {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseballBat : MonoBehaviour
+public class BaseballBat : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
@@ -12,6 +12,14 @@ public class BaseballBat : MonoBehaviour
     // public float damage = 6;         // Damage inflicted by the broom
 
     // private float nextAttackTime = 0f;  // Time when the broom can next attack
+
+    public override void Attack()
+    {
+        // Implement sword attack logic
+        Update();
+        Debug.Log("Broom attacks for " + weaponDamage + " damage!");
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -35,10 +43,10 @@ public class BaseballBat : MonoBehaviour
         timeUntilMelee = 0;
     }
 
-    void Attack()
-    {
-        // Perform the attack logic here, for example, damaging enemies
-        Debug.Log("Broom attacks for " + weaponDamage + " damage!");
-    }
+    // void Attack()
+    // {
+    //     // Perform the attack logic here, for example, damaging enemies
+    //     Debug.Log("Broom attacks for " + weaponDamage + " damage!");
+    // }
 }
 
