@@ -25,7 +25,7 @@ public class Player : Entity
     [SerializeField] private Transform groundCheck, headCheck;
     [SerializeField] private LayerMask groundLayer, brickLayer;
     // [SerializeField] private string endScene;
-    // [SerializeField] private Text coinText, speedText, jumpText;
+    [SerializeField] private Text coinText, speedText, jumpText;
     [SerializeField] private GameObject BCFace;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private GameObject endCanvas; 
@@ -45,12 +45,12 @@ public class Player : Entity
         maxHealth=100;
         curHealth=maxHealth;
         coins=0;
-        // coinText.text = coins.ToString();
-        // speedText.text = this.speed.ToString();
-        // jumpText.text = this.jumpingPower.ToString();
-        DoThing("Coin",(float)coins);
-        DoThing("Speed",this.speed);
-        DoThing("Jump",this.jumpingPower);
+        coinText.text = coins.ToString();
+        speedText.text = this.speed.ToString();
+        jumpText.text = this.jumpingPower.ToString();
+        // DoThing("Coin",(float)coins);
+        // DoThing("Speed",this.speed);
+        // DoThing("Jump",this.jumpingPower);
     }
     //------ UPDATES ------
     void Update()

@@ -2250,9 +2250,13 @@ MonoBehaviour:
   brickLayer:
     serializedVersion: 2
     m_Bits: 0
-  endScene: Lacey_Menu
+  coinText: {fileID: 336727757}
+  speedText: {fileID: 449997672}
+  jumpText: {fileID: 1715186398}
   BCFace: {fileID: 774311732}
   healthBar: {fileID: 239930322}
+  endCanvas: {fileID: 168088478}
+  scoreText: {fileID: 336727757}
 --- !u!61 &1100819361
 BoxCollider2D:
   m_ObjectHideFlags: 0
