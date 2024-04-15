@@ -58,7 +58,7 @@ public class PlayerSoundTests
         playerSounds.hurtSound();
         yield return null;
         Assert.IsTrue(playerSounds.soundPlaying, "Hurt sound should be playing.");
-        Assert.IsTrue(playerSounds.activeSound == "PlayerHit", "Jump sound validated.");
+        Assert.IsTrue(playerSounds.activeSound == "PlayerHit", "Hit sound validated.");
     }
 
 }

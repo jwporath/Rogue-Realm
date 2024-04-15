@@ -99,7 +99,7 @@ public class SoundManager
             }
             else
             {
-                Debug.LogError("No audio clip assigned to the jump.\n");
+                Debug.LogError("No audio clip assigned to " + soundName);
                 GameObject.Destroy(gameObject);
             }
         }
