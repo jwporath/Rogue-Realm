@@ -172,3 +172,47 @@ public class Player : Entity
     }
 
 }
+
+
+// + ThingHappened: Action<string,float> 
+// - groundCheck: Transform
+// - headCheck: Transform
+// - groundLayer: LayerMask
+// - brickLayer: LayerMask
+// - coinText: Text
+// - speedText: Text
+// - jumpText: Text 
+// - BCFace: GameObject
+// - healthBar: HealthBar 
+// - endCanvas: GameObject
+// - scoreText: Text
+// - finalScoreStr: string
+// - maxHealth: float
+// - curHealth: float
+// - coins: int
+// - BCMode: bool
+// - isFacingRight: bool
+// - playerSounds: PlayerSounds
+// - jumpingPower: int
+// - speed: int
+
+
+// + DoThing(): void 
+// - Awake(): void
+// - Update(): void
+// - FixedUpdate(): void
+// - Die(): void
+// - flip(): void
+// - OnCollisionEnter2D(): void
+// - isGround(): bool
+// - decreaseHealth(): void
+// - increaseHealth(): void
+// - pickupCoins(): void
+// - increaseSpeed(): void
+// - increaseJumpingPower(): void
+// - BCModeON(): void
+// - BCModeOFF(): void
+// - getBC(): bool
+// - getCurrentHealth(): float
+// - getMaxHealth(): float
+// - isPlayerFacingRight(): bool

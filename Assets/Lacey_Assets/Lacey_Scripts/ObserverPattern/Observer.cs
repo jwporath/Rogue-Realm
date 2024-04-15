@@ -8,6 +8,7 @@ public class Observer : MonoBehaviour
     [SerializeField] private string eventTypeToObserve;
     private Text textToUpdate;
     private Player player;
+    
     private void Awake()
     {
         player=FindObjectOfType<Player>();
@@ -80,3 +81,15 @@ public class Observer : MonoBehaviour
         }
     }
 }
+
+
+
+// - eventTypeToObserve: string
+// - textToUpdate: Text
+// - player: Player
+
+// - Awake(): void
+// - OnDestroy(): void
+// - OnCoinPickedUp(): void
+// - OnSpeedIncreased(): void
+// - OnJumpPowerIncreased(): void
