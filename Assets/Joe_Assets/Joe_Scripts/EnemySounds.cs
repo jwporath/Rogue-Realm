@@ -7,26 +7,26 @@ public class EnemySounds : SoundManager
     //decoration of decorator pattern
     public override void deathSound()
     {
-        playSound("enemyDeath");
+        playSound("Scream");
     }
 
     public override void hurtSound()
     {
-        playSound("enemyHurt");
+        playSound("Scream");
     }
 
     public override void attackSound()
     {
-        playSound("enemyAttack");
+        playSound("Scream");
     }
 
     public override void moveSound()
     {
-        playSound("enemyMove");
+        playSound("Scream");
     }
 
     public void jumpSound()
     {
-        playSound("enemyJump");
+        playSound("Scream");
     }
 }

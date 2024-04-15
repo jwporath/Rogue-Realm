@@ -58,7 +58,7 @@ public class SoundManagerTests
         SoundManager.hurtSound();
         yield return null;
         Assert.IsTrue(SoundManager.soundPlaying, "Hurt sound should be playing.");
-        Assert.IsTrue(SoundManager.activeSound == "PlayerHit", "Hit sound validated.");
+        Assert.IsTrue(SoundManager.activeSound == "Scream", "Hit sound validated.");
     }
 
 }

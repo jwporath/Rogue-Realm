@@ -14,7 +14,7 @@ public class EnemySoundsTests
         EnemySounds.deathSound();
         yield return null;
         Assert.IsTrue(EnemySounds.soundPlaying, "Death sound should be playing.");
-        Assert.IsTrue(EnemySounds.activeSound == "enemyDeath", "Death sound validated.");
+        Assert.IsTrue(EnemySounds.activeSound == "Scream", "Death sound validated.");
     }
 
     [UnityTest]
@@ -24,7 +24,7 @@ public class EnemySoundsTests
         EnemySounds.attackSound();
         yield return null;
         Assert.IsTrue(EnemySounds.soundPlaying, "Attack sound should be playing.");
-        Assert.IsTrue(EnemySounds.activeSound == "Slash", "Attack sound validated.");
+        Assert.IsTrue(EnemySounds.activeSound == "Scream", "Attack sound validated.");
         
     }
 
@@ -35,7 +35,7 @@ public class EnemySoundsTests
         EnemySounds.moveSound();
         yield return null;
         Assert.IsTrue(EnemySounds.soundPlaying, "Move sound should be playing.");
-        Assert.IsTrue(EnemySounds.activeSound == "enemyMove", "Move sound validated.");
+        Assert.IsTrue(EnemySounds.activeSound == "Scream", "Move sound validated.");
     }
 
     [UnityTest]
@@ -45,7 +45,7 @@ public class EnemySoundsTests
         EnemySounds.jumpSound();
         yield return null;
         Assert.IsTrue(EnemySounds.soundPlaying, "Jump sound should be playing.");
-        Assert.IsTrue(EnemySounds.activeSound == "enemyJump", "Jump sound validated.");
+        Assert.IsTrue(EnemySounds.activeSound == "Scream", "Jump sound validated.");
     }
 
     [UnityTest]
@@ -55,6 +55,6 @@ public class EnemySoundsTests
         EnemySounds.hurtSound();
         yield return null;
         Assert.IsTrue(EnemySounds.soundPlaying, "Hurt sound should be playing.");
-        Assert.IsTrue(EnemySounds.activeSound == "enemyHit", "Hit sound validated.");
+        Assert.IsTrue(EnemySounds.activeSound == "Scream", "Hit sound validated.");
     }
 }
