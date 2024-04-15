@@ -91,7 +91,7 @@ public class Roomcheck
         bool hasItem = false;
         foreach(GameObject i in arr)
         {
-            if (i.GetComponentInChildren<GameObject>() != null)
+            if (i.GetComponentInChildren<Component>() != null)
                 hasItem = true;
         }
 
@@ -121,5 +121,16 @@ public class Roomcheck
         }
         
         Assert.IsTrue(lplatforms.Count() == RoomArr.Length - 1);
+    }
+
+    [UnityTest]
+    public IEnumerator GoodNumEnemies()
+    {
+        // wait for scene to call start()
+        yield return new WaitForSeconds(1f);
+        enemyBehavior[] arr = GameObject.FindObjectsOfType<enemyBehavior>();
+        GameObject[] compArr = GameObject.FindGameObjectsWithTag("EnemySpawn");
+        
+        Assert.IsTrue(arr.Length < compArr.Length && arr.Length > 0);
     }
 }
