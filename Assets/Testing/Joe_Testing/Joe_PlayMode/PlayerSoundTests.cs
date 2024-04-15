@@ -28,6 +28,7 @@ public class PlayerSoundTests
         yield return null;
         Assert.IsTrue(playerSounds.soundPlaying, "Attack sound should be playing.");
         Assert.IsTrue(playerSounds.activeSound == "Slash", "Attack sound validated.");
+        
     }
 
     [UnityTest]

@@ -26,7 +26,7 @@ public class PlayerSounds : SoundManager
        playSound("MoveSound");
     }
 
-    public void jumpSound()
+    public override void jumpSound()
     {
         playSound("JumpSound");
     }

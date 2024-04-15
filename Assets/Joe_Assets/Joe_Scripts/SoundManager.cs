@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SoundManager
 {
-    
+
     public string activeSound = "";
     public bool soundPlaying = false;
 
@@ -48,19 +48,24 @@ public class SoundManager
 
     public virtual void hurtSound()
     {
-        //play hurt sound
+        playSound("Scream");
     }
 
     public virtual void attackSound()
     {
-        //play attack sound
+        playSound("Scream");
     }
 
     public virtual void moveSound()
     {
-        //play movement sound
+        playSound("Scream");
     }
 
+    public virtual void jumpSound()
+    {
+        playSound("Scream");
+    }
+   
     public void playSound(string soundName)
     {
         //Check if the sound is not already playing
