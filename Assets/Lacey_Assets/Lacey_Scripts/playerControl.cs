@@ -87,7 +87,9 @@ public class Player : Entity
         // Destroy(gameObject);
         string displayTxt = finalScoreStr+coins.ToString()+this.jumpingPower.ToString()+this.speed.ToString();
         scoreText.text=displayTxt;
-        endCanvas.SetActive(true); 
+
+        endCanvas.SetActive(true);
+
         Debug.Log("You died.");
         // SceneManager.LoadScene(endScene);
     }
