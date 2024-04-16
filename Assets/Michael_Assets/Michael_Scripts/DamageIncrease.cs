@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Codice.Client.Common.GameUI;
 using UnityEngine;
 
 public class DamageIncrease : MonoBehaviour
@@ -16,7 +17,8 @@ public class DamageIncrease : MonoBehaviour
             // Generate a random number between 1 and 4
             float randomDamageAmount = Random.Range(1, 5);
 
-            Sword1 sword = other.GetComponent<Sword1>();
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            Sword1 sword = p.GetComponentInChildren<Sword1>();
             sword.weaponDamage += randomDamageAmount;
 
             // Add the random damage amount to the player

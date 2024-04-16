@@ -199,13 +199,7 @@ public class Level : MonoBehaviour
             }
             else if (i.tag == "ItemSpawn")
             {
-                if (UnityEngine.Random.Range(1, 3) == 1)
-                    ItemSpawner.createItem(i.gameObject);
-                // if (true)
-                // {
-                //     ItemSpawner.createItem(i.gameObject);
-                //     Debug.Log("Created Item.");
-                // }
+                ItemSpawner.createItem(i.gameObject);
             }
         }
 
