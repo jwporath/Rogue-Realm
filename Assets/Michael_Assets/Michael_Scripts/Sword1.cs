@@ -8,7 +8,7 @@ public class Sword1 : MeleeWeaponBase
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
     //[SerializeField] public float weaponDamage;
-    public int weaponDamage = 8;
+    public float weaponDamage = 8;
 
     
     public float timeUntilMelee;

@@ -6,7 +6,8 @@ public class PipeWrench : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
-    [SerializeField] public float weaponDamage;
+    //[SerializeField] public float weaponDamage;
+    public float weaponDamage = 5;
 
 
     public float timeUntilMelee;

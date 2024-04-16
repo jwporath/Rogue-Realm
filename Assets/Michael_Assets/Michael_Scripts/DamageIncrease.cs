@@ -16,6 +16,9 @@ public class DamageIncrease : MonoBehaviour
             // Generate a random number between 1 and 4
             float randomDamageAmount = Random.Range(1, 5);
 
+            Sword1 sword = other.GetComponent<Sword1>();
+            sword.weaponDamage += randomDamageAmount;
+
             // Add the random damage amount to the player
             Debug.Log("Player increased damage by "+randomDamageAmount+"!!");
 
@@ -31,5 +34,6 @@ public class DamageIncrease : MonoBehaviour
             // Disable the coin object
             gameObject.SetActive(false);
         }
+
     }
 }

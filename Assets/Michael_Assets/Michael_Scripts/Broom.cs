@@ -7,7 +7,9 @@ public class Broom : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
-    [SerializeField] public float weaponDamage;
+    //[SerializeField] public float weaponDamage;
+
+    public float weaponDamage = 3;
     public float timeUntilMelee;
     // public float attackRate = .7f;   // Attack rate in attacks per second
     // public float damage = 5;         // Damage inflicted by the broom

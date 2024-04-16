@@ -6,7 +6,9 @@ public class Hammer : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
-    [SerializeField] public float weaponDamage;
+    //[SerializeField] public float weaponDamage;
+
+    public float weaponDamage = 8;
 
     public float timeUntilMelee;
     // public float attackRate = 1.6f;   // Attack rate in attacks per second

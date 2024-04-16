@@ -6,7 +6,9 @@ public class Shovel : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
-    [SerializeField] public float weaponDamage;
+    //[SerializeField] public float weaponDamage;
+
+    public float weaponDamage = 4;
 
     public float timeUntilMelee;
 
@@ -51,7 +53,7 @@ public class Shovel : MeleeWeaponBase
         if(other.tag == "Enemy")
         {
             //Need to talk to Caleb about this "TakeDamage" function in Enemy script
-            
+
             Debug.Log("Enemy hit!!");
         }
     }

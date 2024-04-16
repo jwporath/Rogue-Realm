@@ -6,7 +6,9 @@ public class Umbrella : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
-    [SerializeField] public float weaponDamage;
+    //[SerializeField] public float weaponDamage;
+
+    public float weaponDamage = 3;
 
     public float timeUntilMelee;
     // public float attackRate = .5f;   // Attack rate in attacks per second

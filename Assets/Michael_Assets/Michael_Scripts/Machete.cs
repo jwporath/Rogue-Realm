@@ -6,7 +6,9 @@ public class Machete : MeleeWeaponBase
 {
     [SerializeField] public Animator anim;
     [SerializeField] public float meleeSpeed;
-    [SerializeField] public float weaponDamage;
+    //[SerializeField] public float weaponDamage;
+
+    public float weaponDamage = 7;
     public float timeUntilMelee;
     // public float attackRate = .8f;   // Attack rate in attacks per second
     // public float damage = 7;         // Damage inflicted by the broom
