@@ -10,6 +10,7 @@ using System;
 public class Player : Entity
 {
     //die flag for sound control
+    private musicManager music = new musicManager();
     private bool dead = false;
     //------ FOR OBSERVER PATTERN ------
     // Define a custom event delegate that includes event information
@@ -52,6 +53,8 @@ public class Player : Entity
         // DoThing("Coin",(float)coins);
         // DoThing("Speed",this.speed);
         // DoThing("Jump",this.jumpingPower);
+        music.gameMusic();
+        
     }
     //------ UPDATES ------
     void Update()

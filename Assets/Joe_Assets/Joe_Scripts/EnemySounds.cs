@@ -25,7 +25,7 @@ public class EnemySounds : SoundManager
         playSound("Scream");
     }
 
-    public void jumpSound()
+    public override void jumpSound()
     {
         playSound("Scream");
     }

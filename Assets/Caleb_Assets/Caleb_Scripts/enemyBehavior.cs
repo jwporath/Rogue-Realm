@@ -6,6 +6,7 @@ using UnityEngine;
 public class enemyBehavior : enemyAttributes
 {
     GameObject Player;
+    //new EnemySounds enemySounds = new EnemySounds();
     [SerializeField] float enemySpeed = 2f;
     [SerializeField] float enemyAggression = 5.5f;
     Rigidbody2D rb;
@@ -71,6 +72,7 @@ public class enemyBehavior : enemyAttributes
 
     public bool isDead()
     {
+        //enemySounds.deathSound();
         return dead;
     }
 

@@ -36,7 +36,8 @@ public class musicManager
             {
                 //Create an AudioSource component on the same GameObject
                 AudioSource audioSource = gameObject.AddComponent<AudioSource>();
-
+                float volume = 0.2f;
+                audioSource.volume = volume;
                 //Set the AudioClip for the AudioSource
                 audioSource.clip = soundClip;
                 songPlaying = songName;
@@ -61,12 +62,12 @@ public class musicManager
 
     public void menuMusic()
     {
-        PlaySong("Menu");
+        PlaySong("Game");
     }
 
     public void gameMusic()
     {
-        PlaySong("Game");
+        PlaySong("Boss");
     }
 
     public void bossMusic()
