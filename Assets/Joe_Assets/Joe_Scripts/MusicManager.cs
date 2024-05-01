@@ -20,7 +20,7 @@ public class musicManager
     
     void pause()
     {
-        isPaused = true;
+        
     }
 
     void PlaySong(string songName)
