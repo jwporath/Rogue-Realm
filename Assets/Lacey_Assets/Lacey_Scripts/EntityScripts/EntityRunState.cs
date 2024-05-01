@@ -5,8 +5,10 @@ using System.Xml;
 
 public class EntityRunState : EntityState
 {
+    //private PlayerSounds sound;
     public override void EnterState(Entity entity){
-
+        //sound = findObjectOfType<playerSounds>();
+        //sound.moveSound();
     }
     public override void UpdateState(Entity entity){
         if(entity.horizontal==0f) {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    public PlayerSounds playerSounds = new PlayerSounds(); 
     [SerializeField] public float horizontal;
     [SerializeField] public Rigidbody2D rBody;
     [SerializeField] public float speed, jumpingPower;

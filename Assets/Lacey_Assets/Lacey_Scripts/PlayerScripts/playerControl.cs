@@ -38,7 +38,7 @@ public class Player : Entity
     private int coins = 0;
     private bool BCMode=false;
     private bool isFacingRight=true;
-    PlayerSounds playerSounds = new PlayerSounds();    
+       
 
     //------ START ------
     // protected override void Start(){
@@ -60,10 +60,11 @@ public class Player : Entity
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
+        
         if(Input.GetButtonDown("Jump") && isGround() && currentState!=jumpingState){
             currentState=jumpingState;
             currentState.EnterState(this);
-            playerSounds.jumpSound();
+            this.playerSounds.jumpSound();
         }
         flip();
         currentState.UpdateState(this);
@@ -71,9 +72,12 @@ public class Player : Entity
         // for testing health bar
         if(Input.GetKeyDown(KeyCode.Return) && !dead)
         {
-            playerSounds.hurtSound();
+            
             Debug.Log("Taking damage");
             decreaseHealth(20);
+        }
+        if(Input.GetKeyDown(KeyCode.P)){
+            this.playerSounds.attackSound();
         }
         if(Input.GetKeyDown(KeyCode.Tab))
         {
@@ -84,6 +88,15 @@ public class Player : Entity
     }
     private void FixedUpdate(){
         currentState.FixedUpdateState(this);
+        if(horizontal != 0f){
+            if(GameObject.FindWithTag("MoveSound") == null){
+                this.playerSounds.moveSound();
+            }
+        }else{
+            if(GameObject.FindWithTag("MoveSound") != null){
+            GameObject.FindWithTag("MoveSound").GetComponent<AudioSource>().Stop();
+            }
+        }
     }
 
     //------ ANIMATIONS ------
@@ -121,11 +134,12 @@ public class Player : Entity
     //------ PICKUPS/POWERUPS ------
     public void decreaseHealth(float damage){
         // make sure BC mode is off
+        this.playerSounds.hurtSound();
         if(BCMode==false){
             curHealth-=damage;
             healthBar.UpdateHealthBar(maxHealth,curHealth);
             if(curHealth<=0){
-                playerSounds.deathSound();
+                this.playerSounds.deathSound();
                 Die();
             } 
         }
@@ -202,7 +216,7 @@ public class Player : Entity
 // - coins: int
 // - BCMode: bool
 // - isFacingRight: bool
-// - playerSounds: PlayerSounds
+// - this.playerSounds: this.playerSounds
 // - jumpingPower: int
 // - speed: int
 

@@ -72,6 +72,9 @@ public class SoundManager
         if (!soundPlaying)
         {
             GameObject gameObject = new GameObject(soundName);
+            if(soundName == "MoveSound"){
+                gameObject.tag = soundName;
+            }
             AudioClip soundClip = Resources.Load<AudioClip>("Joe_Resources/" + soundName);
 
             //Check if the audio clip is not null before using it
