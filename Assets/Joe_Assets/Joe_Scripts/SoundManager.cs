@@ -10,7 +10,7 @@ public class SoundManager
     public string activeSound = "";
     public bool soundPlaying = false;
 
-    public async Task Reset(TimeSpan delay)
+    public async Task Reset(int delay = 70)
     {
         await Task.Delay(delay);
         soundPlaying = false;
@@ -89,7 +89,33 @@ public class SoundManager
                 //set active sound
                 activeSound = soundName;
                 //Reset after a delay
-                Reset(TimeSpan.FromSeconds(soundClip.length));
+                switch(soundName){
+                    case "Scream":
+                        Reset(100);
+                        break;
+                        case "PlayerDeath":
+                        Reset(100);
+                        break;
+                        case "PlayerHit":
+                        Reset(0);
+                        break;
+                        case "Slash":
+                        Reset(0);
+                        break;
+                        case "MoveSound":
+                        Reset(100);
+                        break;
+                        case "JumpSound":
+                        Reset(100);
+                        break;
+                        case "BoingEffect":
+                        Reset(200);
+                        break;
+                        default:
+                        Reset();
+                        break;
+                }
+                Reset();
                 //Play the audio
                 audioSource.Play();
 

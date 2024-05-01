@@ -9,7 +9,8 @@ using System;
 
 public class Player : Entity
 {
-
+    //die flag for sound control
+    private bool dead = false;
     //------ FOR OBSERVER PATTERN ------
     // Define a custom event delegate that includes event information
     public event Action<string,float> ThingHappened;
@@ -65,8 +66,9 @@ public class Player : Entity
         currentState.UpdateState(this);
 
         // for testing health bar
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return) && !dead)
         {
+            playerSounds.hurtSound();
             Debug.Log("Taking damage");
             decreaseHealth(20);
         }
@@ -84,6 +86,7 @@ public class Player : Entity
     //------ ANIMATIONS ------
     private void Die()
     {
+        dead = true;
         // Destroy(gameObject);
         string displayTxt = finalScoreStr+coins.ToString()+this.jumpingPower.ToString()+this.speed.ToString();
         scoreText.text=displayTxt;
@@ -91,6 +94,7 @@ public class Player : Entity
         endCanvas.SetActive(true);
 
         Debug.Log("You died.");
+        
         // SceneManager.LoadScene(endScene);
     }
     private void flip(){
@@ -117,7 +121,10 @@ public class Player : Entity
         if(BCMode==false){
             curHealth-=damage;
             healthBar.UpdateHealthBar(maxHealth,curHealth);
-            if(curHealth<=0) Die();
+            if(curHealth<=0){
+                playerSounds.deathSound();
+                Die();
+            } 
         }
     }
     public void increaseHealth(float modifier){
