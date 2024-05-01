@@ -6,8 +6,10 @@ using UnityEngine;
 public abstract class MeleeWeaponBase : MonoBehaviour, IMeleeWeapon
 {
     public abstract void Attack();
-
-    //public float weaponDamage;
+    // {
+    //     Debug.Log("MeleeWeapon attack!!");
+    // }
+    // //public float weaponDamage;
     // Add more common functionality as needed
 }
 

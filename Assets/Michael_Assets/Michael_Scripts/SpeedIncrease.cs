@@ -9,12 +9,14 @@ public class SpeedIncrease : MonoBehaviour
 
     private bool hasBeenPickedUp = false; // Flag to prevent multiple pickups
 
-    void Start()
+    public virtual void Start()
     {
         player = FindObjectOfType<Player>();
+        Debug.Log("Found the Player from the parent class!");
+        
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the collider is the player and if the powerup has not already been picked up
         if (other.CompareTag("Player") && !hasBeenPickedUp)
