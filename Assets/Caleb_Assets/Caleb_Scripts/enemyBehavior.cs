@@ -91,6 +91,17 @@ public class enemyBehavior : enemyAttributes
         //     this.health -= 100;
         // }
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            Debug.Log("Player Takes Damage");
+            Player player = FindObjectOfType<Player>();
+            //Player player = col.GetComponent<Player>();
+            Debug.Log(this.damage);
+            player.decreaseHealth(this.damage);
+        }
+    }
 
     public virtual void forSakeOfBinding()
     {
