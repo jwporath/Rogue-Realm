@@ -13,6 +13,7 @@ TagManager:
   - ItemSpawn
   - Button
   - Weapon
+  - MoveSound
   layers:
   - Default
   - TransparentFX
